@@ -18,6 +18,45 @@
   things to work on Windows. Feel free to try the configuration on a Unix machine, but it should be noted that some
   issues may be found.
 
+* Configuration
+** General
+*** Philosophy
+    Create a transparent and consistent text editing environment
+    
+**** Transparency
+     One of the things I disliked about many of the configurations for emacs was that it was difficult to know what
+     packages I had pulled in, and what purpose each part of the configuration served. So, when creating this
+     configuration, I aimed to create a config that was as transparent as possible. Both in terms of the packages
+     that I have installed and for the custom code/configuration that I have setup.
+
+***** Package Manager
+      To aid in the transparency of packages that are installed, I created a [[file:custom/package-manager/][custom pacakage manager]]. This 'package
+      manage' aims to only keep a record of all the packages that are installed. This record exists in the [[file:custom/package-manager/packages.db][packages.db]]
+      file. This file contains all of the packages that are used for this configuration. The [[file:custom/package-manager/package-manager.el][package-manager.el]] will
+      simply iterate over this file and ensure that all of the mentioned packages are installed.
+
+      To download packages I am using [[https://github.com/raxod502/straight.el#getting-started][straight]]. This mostly arose as a way to work around being on VPNs that don't
+      allow me to connect to other package repositories. I have not yet found any VPN that doesn't allow me to
+      access GitHub (or whatever server is used by the packages I currently have installed). Because of this restriction,
+      every package that I pull in is done via straight.
+
+***** Clean Init.el
+      I am a developer by trade and one of my pet peeves is cluttered files. Many of the configurations that I see for
+      emacs have every (or almost everything) shoved into their [[file:init.el][init.el]] file. I couldn't stand doing this when I was
+      using other configuration.
+
+      To solve this problem I created separate files that can be loaded in from the init file. At first this caused my
+      startup time to be rather slow, but I was eventually able to solve that problem a combination or compiling the
+      files and preemptively launching an emacs server. I will explain more about each of these later on, but wanted to
+      mention them as well.
+
+****  Consistency
+     The other issue that I found myself butting up against with other configurations was consistency (mostly regarding
+     key-bindings). Emacs has [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Key-Binding-Conventions.html][key binding conventions]], and I wanted to ensure that my configuration followed this
+     convention when possible. I realize that many people will likely prefer to follow some other convention. Simply
+     put, that isn't what I set out to do, or prefer.
+      
+     
 * Things for Server User
 ** Make sure that you setup the %HOME% variable
 *** Use the scripts inside tools/windows
