@@ -1,0 +1,1 @@
+start /B "title" emacsclientw -c -F "'(fullscreen . maximized)'"

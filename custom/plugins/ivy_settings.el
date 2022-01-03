@@ -1,0 +1,6 @@
+(ivy-mode 1)
+(defvar ivy-use-virtual-buffers t)
+(defvar ivy-count-format "(%d/%d) ")
+(defvar ivy-minibuffer-faces nil)
+(defvar ivy-mode t)
+(defvar ivy-use-virtual-buffers t)
