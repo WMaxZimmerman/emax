@@ -1,0 +1,29 @@
+#+TITLE: EMAX
+
+* Description
+A repository to hold all of the configuration files for my emacs setup.
+
+* Things for Server User
+** Make sure that you setup the %HOME% variable
+*** Use the scripts inside tools/windows
+*** Windows Task
+**** Create a task in the Task Schedule to be triggered on log on
+**** that task should execute the .vbs file
+*** Launchy
+**** Create a shortcut to the launch-client.bat
+**** Update icon if you want
+**** Rescan Collection
+
+* Other installs
+- pip
+  - autopep8
+  - flake8
+  - jedi
+- Language Server Protocol (LSP)
+| Language | Command                                                  |
+|----------+----------------------------------------------------------|
+| Python   | pip install 'python-language-server[all]'                |
+| Bash     | npm i -g bash-language-server                            |
+| HTML     | npm i -g vscode-html-languageserver-bin                  |
+| CSS      | npm i -g vscode-css-languageserver-bin                   |
+| JS/TS    | npm i -g typescript-language-server; npm i -g typescript |
