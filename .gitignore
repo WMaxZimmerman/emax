@@ -25,6 +25,7 @@ tramp
 .dap-breakpoints
 bookmarks
 ./transient/*
+transient/*
 
 history
 server/
