@@ -25,6 +25,7 @@
 (setq gc-cons-threshold 100000000)
 (setq read-process-output-max (* 1024 1024)) ;; 1mb
 (setq lsp-idle-delay 0.500)
+(setq lsp-keep-workspace-alive nil)
 
 ;;(add-hook 'prog-mode-hook #'lsp)
 (defun dotfiles--lsp-deferred-if-supported ()
