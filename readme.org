@@ -1,7 +1,22 @@
 #+TITLE: EMAX
 
 * Description
-A repository to hold all of the configuration files for my emacs setup.
+  This is a repository to hold the configuration I use for [[https://www.gnu.org/software/emacs/][emacs]]. This configuration sets up emacs to be used as my
+  primary IDE, Rest Client, Notes System, Jira Interface, and Document Editor. Below I will specify how I accomplish
+  each of these tasks. Feel free to use this configuration if you feel it is helpful. However, it is aimed at solving
+  the needs that I come across.
+
+  The environment that I find primarily find myself in is doing [[https://dotnet.microsoft.com/en-us/][dotnet]] development on a Windows machine. Because of
+  this, my configuration is geared toward this scenario. However, I am using [[https://microsoft.github.io/language-server-protocol/][LSP]] whenever possible for IDE features.
+  This means that, while I am focused more on dotnet, this configuration will work for any programming language that
+  has an [[https://emacs-lsp.github.io/lsp-mode/page/languages/][accessible Language Server]].
+
+  The Windows OS may be a bigger difference though. Being a dotnet (prior to core) developer, I have historically
+  needed to be on a Windows machine. Because of that restriction, I have setup many things that work for Windows. I
+  configure my Windows machine to run [[https://en.wikipedia.org/wiki/Bash_(Unix_shell)][Bash]] and all of my pathing is expecting as much. This means that, in theory,
+  the configuration should work on a Unix machine. However, Some of the configuration is specifically to allow some
+  things to work on Windows. Feel free to try the configuration on a Unix machine, but it should be noted that some
+  issues may be found.
 
 * Things for Server User
 ** Make sure that you setup the %HOME% variable
