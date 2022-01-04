@@ -1,27 +1,5 @@
 #+TITLE: EMAX
 
-  - [[Description][Description]]
-  - [[Configuration][Configuration]]
-    - [[General][General]]
-      - [[Philosophy][Philosophy]]
-        - [[Transparency][Transparency]]
-          - [[Package Manager][Package Manager]]
-          - [[Clean Init.el][Clean Init.el]]
-          - [["custom" dir]["custom" dir]]
-        - [[Consistency][Consistency]]
-      - [[Performance][Performance]]
-  - [[Things for Server User][Things for Server User]]
-    - [[Make sure that you setup the %HOME% variable][Make sure that you setup the %HOME% variable]]
-      - [[Use the scripts inside tools/windows][Use the scripts inside tools/windows]]
-      - [[Windows Task][Windows Task]]
-        - [[Create a task in the Task Schedule to be triggered on log on][Create a task in the Task Schedule to be triggered on log on]]
-        - [[that task should execute the .vbs file][that task should execute the .vbs file]]
-      - [[Launchy][Launchy]]
-        - [[Create a shortcut to the launch-client.bat][Create a shortcut to the launch-client.bat]]
-        - [[Update icon if you want][Update icon if you want]]
-        - [[Rescan Collection][Rescan Collection]]
-  - [[Other installs][Other installs]]
-
 * Description
   This is a repository to hold the configuration I use for [[https://www.gnu.org/software/emacs/][emacs]]. This configuration sets up emacs to be used as my
   primary IDE, Rest Client, Notes System, Jira Interface, and Document Editor. Below I will specify how I accomplish
