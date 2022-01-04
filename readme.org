@@ -50,11 +50,30 @@
       files and preemptively launching an emacs server. I will explain more about each of these later on, but wanted to
       mention them as well.
 
+***** "custom" dir
+      To help keep files organized and focused, I have all of the custom code located underneath the [[file:custom/][custom]] directory.
+      Underneath that directory are several more directories that allow for further categorization of the code files.
+      For the most part, that is as far as the structure goes. There are a few exceptions, however, I am aiming to clean
+      them up with a bit more thought and effort.
+
 ****  Consistency
      The other issue that I found myself butting up against with other configurations was consistency (mostly regarding
      key-bindings). Emacs has [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Key-Binding-Conventions.html][key binding conventions]], and I wanted to ensure that my configuration followed this
      convention when possible. I realize that many people will likely prefer to follow some other convention. Simply
      put, that isn't what I set out to do, or prefer.
+
+*** Performance
+    As mentioned above, the extra files do cause some start-up performance issues. To help to mitigate this, I created
+    some functions (defined in the init due to the need of them before loading any files) that will check for compiled
+    versions of the custom files. If there is not a compiled file found with a modified time stamp later than its '.el'
+    counterpart, than the file is compiled. The first time this is performed there is some additional overhead in
+    compiling the files. However, after the initial start-up the files are loaded much quicker reducing the overall wait
+    time.
+
+    If that reduction in start-up time is still too little, You may be interested in the later section that details
+    launching a server on system (Windows) start-up. This does not actually reduce the start-up time, but instead has
+    all of the start-up time happening silently in the background. From there you can launch clients instantly that talk
+    to the already started server.
       
      
 * Things for Server User
