@@ -74,29 +74,45 @@
     launching a server on system (Windows) start-up. This does not actually reduce the start-up time, but instead has
     all of the start-up time happening silently in the background. From there you can launch clients instantly that talk
     to the already started server.
-      
-     
-* Things for Server User
-** Make sure that you setup the %HOME% variable
-*** Use the scripts inside tools/windows
-*** Windows Task
-**** Create a task in the Task Schedule to be triggered on log on
-**** that task should execute the .vbs file
-*** Launchy
-**** Create a shortcut to the launch-client.bat
-**** Update icon if you want
-**** Rescan Collection
 
-* Other installs
-- pip
-  - autopep8
-  - flake8
-  - jedi
-- Language Server Protocol (LSP)
-| Language | Command                                                  |
-|----------+----------------------------------------------------------|
-| Python   | pip install 'python-language-server[all]'                |
-| Bash     | npm i -g bash-language-server                            |
-| HTML     | npm i -g vscode-html-languageserver-bin                  |
-| CSS      | npm i -g vscode-css-languageserver-bin                   |
-| JS/TS    | npm i -g typescript-language-server; npm i -g typescript |
+** IDE
+   Emacs is my primary (and for the most part sole) IDE. I have been using emacs for several years now, and, when I
+   started, there was a decent amount of configuration and setup need to get languages setup for programming. With the
+   introduction of the [[https://microsoft.github.io/language-server-protocol/][Language Server Protocol]] by Microsoft, the setup for a new language became almost trivial. For
+   every language that I am able to I am using [[https://emacs-lsp.github.io/lsp-mode/][lsp-mode]]. This library is only getting better overtime and installing
+   servers is becoming easier and easier.
+
+   Many of the languages that I use have the ability to automatically install their language servers. If you are able
+   to do this, I would highly recommend it. However, there are a few that need manual installation (though fewer and
+   fewer all the time).
+
+   As of right now the only language that is manually setup in my configuration is for Angular. To get this working,
+   I followed manual instructions for angular server. However, I wasn't able to get this working with a global install
+   of the LSP. Because of this, you will want your project to have a local reference to the [[https://angular.io/guide/language-service][angular language service]].
+
+*** Language Specific Configuration   
+   A few languages do have language specific configurations. All of these can be found in the [[file:custom/languages/][laanguages]] directory in
+   the file named after the language.
+      
+** Background Server
+   As mentioned in the 'Performance' section, I have emacs setup to silently launch a server in the background when I
+   log onto my machine. To do this there are a few things you will want to setup.
+
+*** Server Launch   
+   - [[https://www.computerhope.com/issues/ch000549.htm#windows11][Environment Variables]]
+     - HOME :: You will want to set this variable to your [[https://en.wikipedia.org/wiki/Home_directory][home]] directory.
+   - Create a [[https://www.howtogeek.com/138159/how-to-enable-programs-and-custom-scripts-to-run-at-boot/#:~:text=Go%20to%20the%20Start%20menu,%2C%20select%20%E2%80%9CCreate%20Task.%E2%80%9D][startup task]]
+     - Set the task to launch the [[file:tools/windows/silent-launch.vbs][silent-launch.vbs]] file
+       
+*** Client Launch
+    Launching the client isn't anything too fancy. However, I want to be able to launch this with the tool [[https://www.launchy.net/index.php][launchy]].
+    To accomplish this there is a little bit more involved than entering a command to launch an emacs client. If you
+    simply want to launch the emacs client via a terminal you can use =emacsclientw -c -F "'(fullscreen . maximized)'"=.
+
+    For the rest of this section, I am going to assume that you are familiar with launchy or you have some sort of
+    equivalent application launcher.
+
+    - Create a shortcut to the [[file:tools/windows/launch-client.bat][launch-client.bat]] file
+      - If you want it to feel more 'real' you can attempt to [[https://www.howtogeek.com/687014/how-to-change-the-icon-of-a-shortcut-on-windows-10/][change the icon]] to the [[https://www.emacswiki.org/emacs/EmacsIcons][emacs logo]].
+    - Move that file to a [[https://www.howto-connect.com/start-menu-folder-location-in-windows-10/][directory]] that is indexed by your application launcher
+    - Ensure that your application launcher sees your new shortcut (for launchy you will need to rescan the catalog)
