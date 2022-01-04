@@ -39,14 +39,17 @@
 	 "~/.emacs.d/custom/plugins/writegood-mode"
 	 "~/.emacs.d/custom/plugins/slack"
 	 "~/.emacs.d/custom/organization/ox-reveal"
+     ;; === Programming Languages ===
 	 "~/.emacs.d/custom/languages/lsp"
 	 "~/.emacs.d/custom/languages/sql"
 	 "~/.emacs.d/custom/languages/java"
+	 "~/.emacs.d/custom/languages/angular"
 	 ;; "~/.emacs.d/custom/languages/csharp"
 	 ;; "~/.emacs.d/custom/languages/typescript"
 	 ;; "~/.emacs.d/custom/languages/react"
 	 ;; "~/.emacs.d/custom/languages/python"
 	 "~/.emacs.d/custom/languages/yaml"
+     ;; === Org Babel ===
 	 "~/.emacs.d/custom/organization/org-babel/ob-csharp"
 	 "~/.emacs.d/custom/organization/org-babel/ob-powershell"
 	 "~/.emacs.d/custom/organization/org-babel/org-babel-settings"
@@ -88,7 +91,6 @@
 ;; === Programming ===
 (load "~/.emacs.d/custom/languages/lsp")
 (load "~/.emacs.d/custom/languages/sql")
-(load "~/.emacs.d/custom/languages/java")
 ;; (load "~/.emacs.d/custom/languages/csharp")
 ;; (load "~/.emacs.d/custom/languages/typescript")
 ;; (load "~/.emacs.d/custom/languages/python")

@@ -159,15 +159,9 @@
 (define-key lsp-command-map (kbd "d n") 'dap-next)
 (define-key lsp-command-map (kbd "d c") 'dap-continue)
 
-;; === Language Servers ===
-(setq lsp-clients-angular-language-server-command
-  '("node"
-    "node_modules/@angular/language-server"
-    "--ngProbeLocations"
-    "node_modules"
-    "--tsProbeLocations"
-    "node_modules"
-    "--stdio"))
+;; === Language Specifics ===
+(load "~/.emacs.d/custom/languages/angular")
+(load "~/.emacs.d/custom/languages/java")
 
 
 (provide 'lsp)
