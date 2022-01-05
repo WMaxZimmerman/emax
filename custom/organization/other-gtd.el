@@ -5,13 +5,13 @@
 (require 'org)
 
 ;; Files
-(setq org-directory "~/gtd")
-(setq org-agenda-files (list "~/gtd/inbox.org"
-                             "~/gtd/gtd.org"
-                             "~/gtd/files/projects/projects.org"
-                             "~/gtd/tickler.org"
-                             "~/gtd/agenda.org"
-                             "~/gtd/notes.org"))
+(setq org-directory "~/Dropbox/gtd")
+(setq org-agenda-files (list "~/Dropbox/gtd/inbox.org"
+                             "~/Dropbox/gtd/gtd.org"
+                             "~/Dropbox/gtd/projects.org"
+                             "~/Dropbox/gtd/tickler.org"
+                             "~/Dropbox/gtd/agenda.org"
+                             "~/Dropbox/gtd/notes.org"))
 
 ;; Capture
 (setq org-capture-templates
