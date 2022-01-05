@@ -41,6 +41,7 @@
 	 "~/.emacs.d/custom/organization/ox-reveal"
      ;; === Programming Languages ===
 	 "~/.emacs.d/custom/languages/lsp"
+	 "~/.emacs.d/custom/languages/dotnet"
 	 "~/.emacs.d/custom/languages/sql"
 	 "~/.emacs.d/custom/languages/java"
 	 "~/.emacs.d/custom/languages/angular"

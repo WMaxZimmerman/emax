@@ -3,8 +3,6 @@
 ;;; Provides IDE features for multiple language
 
 
-(setq lsp-keymap-prefix "C-c C-l")
-
 (require 'lsp-mode)
 (require 'lsp-ui)
 (require 'lsp-ivy)
@@ -160,6 +158,7 @@
 (define-key lsp-command-map (kbd "d c") 'dap-continue)
 
 ;; === Language Specifics ===
+(load "~/.emacs.d/custom/languages/dotnet")
 (load "~/.emacs.d/custom/languages/angular")
 (load "~/.emacs.d/custom/languages/java")
 
