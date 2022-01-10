@@ -33,6 +33,7 @@ groovy-mode
 multiple-cursors
 org-d20
 org-jira
+toc-org
 nimbus-theme
 flyspell
 flyspell-correct

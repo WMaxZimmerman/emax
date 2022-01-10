@@ -32,6 +32,7 @@
 	 "~/.emacs.d/custom/organization/backupfiles"
 	 "~/.emacs.d/custom/organization/other-gtd"
 	 "~/.emacs.d/custom/organization/jira"
+	 "~/.emacs.d/custom/organization/toc"
 	 "~/.emacs.d/custom/keyboard/shortcuts"
 	 "~/.emacs.d/custom/settings"
 	 "~/.emacs.d/custom/functions"
@@ -78,6 +79,7 @@
 (load "~/.emacs.d/custom/plugins/whitespace")
 (load "~/.emacs.d/custom/plugins/slack")
 (load "~/.emacs.d/custom/organization/jira")
+(load "~/.emacs.d/custom/organization/toc")
 
 ;; === Org Babel ===
 (load "~/.emacs.d/custom/organization/org-babel/ob-csharp")

@@ -45,3 +45,4 @@ workspace/
 ./.dap-breakpoints*
 eclipse.jdt.ls/
 request/
+*.data
