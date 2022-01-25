@@ -45,6 +45,53 @@
   (message "input is: %d" score)
   (floor (- (/ score 2) 5)))
 
+(defun calc-dnd-point-buy-cost (score)
+  "Calculates the modifier of a DND ability score"
+  (setq base-cost (- (string-to-number score) 8))
+  (setq cost 0)
+  (if (> base-cost 5)
+      (if (> base-cost 6)
+          (setq cost (+ base-cost 2))
+        (setq cost (+ base-cost 1)))
+    (setq cost base-cost))
+  (if (> cost 9)
+      "Value Too High"
+    (if (< cost 0)
+        "Value Too Low"
+      cost)))
+
+(defun dnd-eval-charsheet ()
+  "Evaluates the dnd character sheet that you are currently in"
+  (interactive)
+  
+  (setq starting-point (point))
+  (outline-show-all)
+  (goto-char (point-min))
+
+  (search-forward "BEGIN_SRC")
+  (org-babel-execute-src-block)
+  (search-forward ":results:")
+  (next-line)
+  (backward-word)
+
+  (defun my-org-confirm-babel-evaluate (lang body)
+    (not (string= lang "elisp")))  ;don't ask for ditaa
+  (setq org-confirm-babel-evaluate #'my-org-confirm-babel-evaluate)
+  
+  (org-ctrl-c-ctrl-c)
+
+  (unwind-protect
+      (while (string= "1" "1")
+        (search-forward "TBLFM")
+        (org-ctrl-c-ctrl-c))
+    (progn 
+      (goto-char (point-min))
+      (search-forward "* Constants")
+      (outline-hide-leaves)
+      (goto-char starting-point))))
+
+  
+
 (provide 'dnd)
 
 ;;; dnd.el ends here
