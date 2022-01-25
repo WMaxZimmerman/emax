@@ -37,7 +37,8 @@
   "Manage and interact with character sheets"
   :lighter " dnd"
   :keymap (let ((map (make-sparse-keymap)))
-            (define-key map (kbd "M-r") 'rtd)
+            (define-key map (kbd "C-c r") 'rtd)
+            (define-key map (kbd "C-c e") 'dnd-eval-charsheet)
             map))
 
 (defun calc-dnd-mod (score)
