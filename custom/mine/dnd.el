@@ -3,6 +3,8 @@
 ;;; This is just a test of creating some function.
 
 ;;; Code:
+(require 'yasnippet)
+(require 'org)
 
 (defun rtd ()
   "Sometimes you just got to roll the dice."
@@ -33,6 +35,14 @@
 
   (message "You rolled %d" dnd-total))
 
+
+;; yas
+(yas-global-mode 1)
+(setq yas-snippet-dirs (append yas-snippet-dirs
+                               '("~/.emacs.d/snippets")))
+(yas-reload-all)
+
+
 (define-minor-mode dnd-mode
   "Manage and interact with character sheets"
   :lighter " dnd"
@@ -40,6 +50,8 @@
             (define-key map (kbd "C-c r") 'rtd)
             (define-key map (kbd "C-c e") 'dnd-eval-charsheet)
             map))
+
+;; funcs
 
 (defun calc-dnd-mod (score)
   "Calculates the modifier of a DND ability score"
