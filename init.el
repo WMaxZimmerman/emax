@@ -34,6 +34,7 @@
 	 "~/.emacs.d/custom/organization/jira"
 	 "~/.emacs.d/custom/organization/toc"
 	 "~/.emacs.d/custom/keyboard/shortcuts"
+	 "~/.emacs.d/custom/mine/dnd"
 	 "~/.emacs.d/custom/settings"
 	 "~/.emacs.d/custom/functions"
 	 "~/.emacs.d/custom/languages/english"
@@ -64,6 +65,7 @@
 (load "~/.emacs.d/custom/keyboard/shortcuts")
 (load "~/.emacs.d/custom/functions")
 (load "~/.emacs.d/custom/settings")
+(load "~/.emacs.d/custom/mine/dnd")
 
 ;; === Navigation/Searching ===
 (load "~/.emacs.d/custom/plugins/projectile")

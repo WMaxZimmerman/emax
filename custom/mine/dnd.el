@@ -33,6 +33,11 @@
             (define-key map (kbd "M-r") 'rtd)
             map))
 
+(defun calc-dnd-mod (score)
+  "Calculates the modifier of a DND ability score"
+  (message "input is: %d" score)
+  (floor (- (/ score 2) 5)))
+
 (provide 'dnd)
 
 ;;; dnd.el ends here

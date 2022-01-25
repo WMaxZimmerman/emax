@@ -3,15 +3,27 @@
 ;;; For information on setup - https://github.com/rougier/emacs-gtd
 
 (require 'org)
+(require 'org-id)
+(require 'dnd)
+
+;; Functions
+(defun org-my-toggle-agenda-file-set ()
+  (interactive)
+  (if (equal org-agenda-files "~/.emacs.d/agendas/.agenda_files_default")
+      (progn (setq org-agenda-files "~/.emacs.d/agendas/.agenda_files_dnd")
+             (setq org-directory "~/Dropbox/dnd"))
+    (progn (setq org-agenda-files "~/.emacs.d/agendas/.agenda_files_default")
+           (setq org-directory "~/Dropbox/gtd")))
+  (message "Using %s" org-agenda-files))
 
 ;; Files
-(setq org-directory "~/Dropbox/gtd")
-(setq org-agenda-files (list "~/Dropbox/gtd/inbox.org"
-                             "~/Dropbox/gtd/gtd.org"
-                             "~/Dropbox/gtd/projects.org"
-                             "~/Dropbox/gtd/tickler.org"
-                             "~/Dropbox/gtd/agenda.org"
-                             "~/Dropbox/gtd/notes.org"))
+;; (setq org-directory "~/Dropbox/gtd")
+;; (setq org-agenda-files (list "~/Dropbox/gtd/inbox.org"
+;;                              "~/Dropbox/gtd/gtd.org"
+;;                              "~/Dropbox/gtd/projects.org"
+;;                              "~/Dropbox/gtd/tickler.org"
+;;                              "~/Dropbox/gtd/agenda.org"
+;;                              "~/Dropbox/gtd/notes.org"))
 
 ;; Capture
 (setq org-capture-templates
