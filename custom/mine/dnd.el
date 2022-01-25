@@ -8,22 +8,29 @@
   "Sometimes you just got to roll the dice."
   (interactive)
 
-  (defvar dnd-text (buffer-substring (region-beginning) (region-end)))
-  (defvar dnd-values (split-string dnd-text "d"))
-
-  (defvar dnd-count (string-to-number (nth 0 dnd-values)))
-  (defvar dnd-limit (string-to-number (nth 1 dnd-values)))
+  (setq dnd-text (buffer-substring (region-beginning) (region-end)))
+  (setq dnd-text-values (split-string dnd-text " "))
+  (setq dnd-dice-text (nth 0 dnd-text-values))
+  (setq dnd-mod-text (nth 2 dnd-text-values))
   
-  (defvar dnd-x 0)
-  (defvar dnd-total 0)
+  (setq dnd-values (split-string dnd-dice-text "d"))
+  (setq dnd-count (string-to-number (nth 0 dnd-values)))
+  (setq dnd-limit (string-to-number (nth 1 dnd-values)))
 
-  (while (< dnd-x dnd-count)
-    (defvar dnd-rand (random dnd-limit))
-    (defvar dnd-roll (+ dnd-rand 1))
-    (defvar dnd-total (+ dnd-total dnd-roll))
-    (message "Dice %d was %d" (+ 1 dnd-x) dnd-roll)
-    (defvar dnd-x (+ dnd-x 1)))
-  
+  (setq dnd-total 0)
+  (let ((dnd-x 0))
+    (while (< dnd-x dnd-count)
+      (setq dnd-rand (random dnd-limit))
+      (setq dnd-roll (+ dnd-rand 1))
+      (setq dnd-total (+ dnd-total dnd-roll))
+      (message "Dice %d was %d" (+ 1 dnd-x) dnd-roll)
+      (setq dnd-x (+ dnd-x 1))))
+
+  (message "Mod was %s" dnd-mod-text)
+  (if dnd-mod-text
+      (setq dnd-total (+ dnd-total (string-to-number dnd-mod-text)))
+    (nil))
+
   (message "You rolled %d" dnd-total))
 
 (define-minor-mode dnd-mode
