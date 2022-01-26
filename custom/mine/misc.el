@@ -5,7 +5,7 @@
 ;;; Code:
 
 (defun meme ()
-  "Sometimes you just got to roll the dice."
+  "tHiS MaKeS ThE CaSe oF ThE HiGhLiGhTeD StRiNg bEtTeR"
   (interactive)
 
   (setq text (buffer-substring (region-beginning) (region-end)))
