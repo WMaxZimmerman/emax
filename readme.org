@@ -77,8 +77,9 @@
 
 *** Integrations
 **** Org-Mode
-     [[https://orgmode.org/index.html][Org-Mode]] is a mark up language used to do many different
-     tasks such as notes, literate programming, to-do lists, agendas, etc..
+     [[https://orgmode.org/index.html][Org-Mode]] is a mark up language used to do many different tasks such as notes, literate programming, to-do lists,
+     agendas, etc. This mode is built into Emacs out of the box. 
+     
 ***** Common Key Strokes
       ~C-c a~ - Open agenda
       ~C-c c~ - Capture
