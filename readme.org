@@ -18,6 +18,7 @@
   things to work on Windows. Feel free to try the configuration on a Unix machine, but it should be noted that some
   issues may be found.
 
+* Getting Started
 * Configuration
 ** General
 *** Philosophy
@@ -75,6 +76,21 @@
     all of the start-up time happening silently in the background. From there you can launch clients instantly that talk
     to the already started server.
 
+*** Integrations
+**** Org-Mode
+     [[https://orgmode.org/index.html][Org-Mode]] is a mark up language used to do many different
+     tasks such as notes, literate programming, to-do lists, agendas, etc..
+***** Common Key Strokes
+      ~C-c a~ - Open agenda
+      ~C-c c~ - Capture
+      ~C-c C-t~ - Todo Progress
+***** Dropbox
+      After installing Dropbox by default it will look in your home directory in the ~/Dropbox folder.
+      This configuration is set up to have a gtd (Get Things Done) folder under the ~/Dropbox folder. This is
+      to sync those specific documents to a cloud storage location. These todo / tasks / etc can now be accessed on
+      multiple devices. For utilization on phones download and app that is an org file view that can integrate
+      with Dropbox. Ex. Orgzly for Android.
+
 ** IDE
    Emacs is my primary (and for the most part sole) IDE. I have been using emacs for several years now, and, when I
    started, there was a decent amount of configuration and setup need to get languages setup for programming. With the
@@ -91,9 +107,9 @@
    of the LSP. Because of this, you will want your project to have a local reference to the [[https://angular.io/guide/language-service][angular language service]].
 
 *** Language Specific Configuration   
-   A few languages do have language specific configurations. All of these can be found in the [[file:custom/languages/][laanguages]] directory in
+   A few languages do have language specific configurations. All of these can be found in the [[file:custom/languages/][languages]] directory in
    the file named after the language.
-      
+   
 ** Background Server
    As mentioned in the 'Performance' section, I have emacs setup to silently launch a server in the background when I
    log onto my machine. To do this there are a few things you will want to setup.
@@ -116,3 +132,4 @@
       - If you want it to feel more 'real' you can attempt to [[https://www.howtogeek.com/687014/how-to-change-the-icon-of-a-shortcut-on-windows-10/][change the icon]] to the [[https://www.emacswiki.org/emacs/EmacsIcons][emacs logo]].
     - Move that file to a [[https://www.howto-connect.com/start-menu-folder-location-in-windows-10/][directory]] that is indexed by your application launcher
     - Ensure that your application launcher sees your new shortcut (for launchy you will need to rescan the catalog)
+      
