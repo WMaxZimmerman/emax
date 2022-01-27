@@ -18,7 +18,6 @@
   things to work on Windows. Feel free to try the configuration on a Unix machine, but it should be noted that some
   issues may be found.
 
-* Getting Started
 * Configuration
 ** General
 *** Philosophy
@@ -90,7 +89,6 @@
       to sync those specific documents to a cloud storage location. These todo / tasks / etc can now be accessed on
       multiple devices. For utilization on phones download and app that is an org file view that can integrate
       with Dropbox. Ex. Orgzly for Android.
-
 ** IDE
    Emacs is my primary (and for the most part sole) IDE. I have been using emacs for several years now, and, when I
    started, there was a decent amount of configuration and setup need to get languages setup for programming. With the
@@ -105,7 +103,6 @@
    As of right now the only language that is manually setup in my configuration is for Angular. To get this working,
    I followed manual instructions for angular server. However, I wasn't able to get this working with a global install
    of the LSP. Because of this, you will want your project to have a local reference to the [[https://angular.io/guide/language-service][angular language service]].
-
 *** Language Specific Configuration   
    A few languages do have language specific configurations. All of these can be found in the [[file:custom/languages/][languages]] directory in
    the file named after the language.
