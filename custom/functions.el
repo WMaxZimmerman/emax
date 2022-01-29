@@ -26,3 +26,10 @@ there's a region, all lines that region covers will be duplicated."
    (if (file-exists-p filePath)
        (message (concat  "File " (concat filePath " already exists")))
      (with-temp-buffer (write-file filePath))))
+
+
+(defun read-lines (filePath)
+  "Return a list of lines of a file at filePath."
+  (with-temp-buffer
+    (insert-file-contents filePath)
+    (split-string (buffer-string) "\n" t)))

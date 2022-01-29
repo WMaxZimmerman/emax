@@ -16,15 +16,6 @@
            (setq org-directory "~/Dropbox/gtd")))
   (message "Using %s" org-agenda-files))
 
-;; Files
-;; (setq org-directory "~/Dropbox/gtd")
-;; (setq org-agenda-files (list "~/Dropbox/gtd/inbox.org"
-;;                              "~/Dropbox/gtd/gtd.org"
-;;                              "~/Dropbox/gtd/projects.org"
-;;                              "~/Dropbox/gtd/tickler.org"
-;;                              "~/Dropbox/gtd/agenda.org"
-;;                              "~/Dropbox/gtd/notes.org"))
-
 ;; Capture
 (setq org-capture-templates
       `(("i" "Inbox" entry  (file "inbox.org")

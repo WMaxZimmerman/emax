@@ -6,6 +6,24 @@
 (require 'yasnippet)
 (require 'org)
 
+(defun dnd-select-session-target ()
+  "Set the org capture to a sub directory in dnd"
+  (interactive)
+  (setq dir (read-directory-name "dir:"))
+  (progn (setq org-agenda-files (list "~/Dropbox/dnd/references/data/spells.org"
+                                 (concat dir "notes.org")
+                                 (concat dir "inbox.org")))
+         (setq org-agenda-files (append org-agenda-files (read-lines (concat dir ".agenda-index"))))
+         (setq org-directory dir)
+         (setq org-capture-templates
+               `(("i" "Inbox" entry  (file "inbox.org")
+                  ,(concat "* TODO %?\n"
+                           "/Entered on/ %U"))
+                 ("n" "Note" entry  (file "notes.org")
+                  ,(concat "* %?\n"
+                           "/Entered on/ %U"))))))
+
+
 (defun rtd ()
   "Sometimes you just got to roll the dice."
   (interactive)

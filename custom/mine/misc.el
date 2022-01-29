@@ -23,6 +23,24 @@
   (kill-region (region-beginning) (region-end))
   (insert new-text))
 
+(defun lithp ()
+  "Thith function will write thingth with a lithp"
+  (interactive)
+
+  (setq text (buffer-substring (region-beginning) (region-end)))
+  (setq chars (mapcar 'string text))
+  (setq new-text (mapconcat
+                   (lambda (char)
+                     (if (string= "s" char)
+                         "th"
+                       (if (string= "S" char)
+                           "Th"
+                         char)))
+                   chars ""))
+
+  (kill-region (region-beginning) (region-end))
+  (insert new-text))
+
 (provide 'misc)
 
 ;;; misc.el ends here
