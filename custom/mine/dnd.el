@@ -14,6 +14,7 @@
                                  (concat dir "notes.org")
                                  (concat dir "inbox.org")))
          (setq org-agenda-files (append org-agenda-files (read-lines (concat dir ".agenda-index"))))
+         (setq org-agenda-files (append org-agenda-files (read-lines (concat "~/Dropbox/dnd/srd/" ".agenda-index"))))
          (setq org-directory dir)
          (setq org-capture-templates
                `(("i" "Inbox" entry  (file "inbox.org")
