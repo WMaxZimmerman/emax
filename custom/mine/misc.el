@@ -41,6 +41,39 @@
   (kill-region (region-beginning) (region-end))
   (insert new-text))
 
+(defun org-eval-buffer ()
+  "Evaluates the current org buffer"
+  (interactive)
+
+  (defun my-org-confirm-babel-evaluate (lang body)
+    (not (string= lang "elisp")))  ;don't ask for ditaa
+  (setq org-confirm-babel-evaluate #'my-org-confirm-babel-evaluate)
+  
+  (setq starting-point (point))
+  (outline-show-all)
+  (goto-char (point-min))
+
+  
+
+  (unwind-protect
+      (while (string= "1" "1")
+        (search-forward "BEGIN_SRC")
+        (org-babel-execute-src-block)
+        (search-forward ":results:")
+        (next-line)
+        (backward-word)
+        
+        (org-ctrl-c-ctrl-c))
+    (unwind-protect
+        (while (string= "1" "1")
+          (search-forward "TBLFM")
+          (org-ctrl-c-ctrl-c))
+      (progn 
+        (goto-char (point-min))
+        (search-forward "* Constants")
+        (outline-hide-leaves)
+        (goto-char starting-point)))))
+
 (provide 'misc)
 
 ;;; misc.el ends here

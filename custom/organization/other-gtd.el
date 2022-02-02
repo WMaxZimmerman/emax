@@ -16,6 +16,8 @@
            (setq org-directory "~/Dropbox/gtd")))
   (message "Using %s" org-agenda-files))
 
+(org-my-toggle-agenda-file-set)
+
 ;; Capture
 (setq org-capture-templates
       `(("i" "Inbox" entry  (file "inbox.org")
