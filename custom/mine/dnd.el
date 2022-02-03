@@ -10,12 +10,9 @@
   "Set the org capture to a sub directory in dnd"
   (interactive)
   (setq dir (read-directory-name "dir:"))
-  (progn (setq org-agenda-files (list "~/Dropbox/dnd/references/data/spells.org"
-                                 (concat dir "notes.org")
-                                 (concat dir "inbox.org")))
+  (progn (setq org-agenda-files (read-lines (concat dir "~/Dropbox/dnd/.agenda-index")))
          (setq org-agenda-files (append org-agenda-files (read-lines (concat dir ".agenda-index"))))
-         (setq org-agenda-files (append org-agenda-files (read-lines (concat "~/Dropbox/dnd/srd/" ".agenda-index"))))
-         (setq org-directory dir)
+         (setq org-directory (concat dir "org/"))
          (setq org-capture-templates
                `(("i" "Inbox" entry  (file "inbox.org")
                   ,(concat "* TODO %?\n"
