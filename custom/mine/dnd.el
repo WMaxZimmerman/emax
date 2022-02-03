@@ -74,6 +74,25 @@
   (message "input is: %d" score)
   (floor (- (/ score 2) 5)))
 
+(defun calc-dnd-pb (pb check)
+  "Calculates the Proficiency Bonus to use based on the check and value provided"
+  (if (string= check "X")
+      (string-to-number pb)
+    (if (string= check "XX")
+      (* 2 (string-to-number pb))
+      0)))
+
+(defun dnd-output-ability-constants (table)
+  "Outputs constants for the Ability Modifiers"
+  (setq consts (mapcar (lambda (row) (format "#+CONSTANTS: %s=%s\n" (nth 0 row) (nth 1 row))) table))
+  (while consts
+    (if (string= "#+CONSTANTS: Allowed=27\n" (car consts))
+        (setq consts (cdr consts))
+      (if (string= "#+CONSTANTS: =\n" (car consts))
+          (setq consts (cdr consts))
+        (progn (princ (car consts))
+               (setq consts (cdr consts)))))))
+
 (defun calc-dnd-point-buy-cost (score)
   "Calculates the modifier of a DND ability score"
   (setq base-cost (- (string-to-number score) 8))
