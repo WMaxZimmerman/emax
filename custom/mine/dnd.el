@@ -10,7 +10,7 @@
   "Set the org capture to a sub directory in dnd"
   (interactive)
   (setq dir (read-directory-name "dir:"))
-  (progn (setq org-agenda-files (read-lines (concat dir "~/Dropbox/dnd/.agenda-index")))
+  (progn (setq org-agenda-files (read-lines "~/Dropbox/dnd/.agenda-index"))
          (setq org-agenda-files (append org-agenda-files (read-lines (concat dir ".agenda-index"))))
          (setq org-directory (concat dir "org/"))
          (setq org-capture-templates
@@ -77,9 +77,9 @@
 (defun calc-dnd-pb (pb check)
   "Calculates the Proficiency Bonus to use based on the check and value provided"
   (if (string= check "X")
-      (string-to-number pb)
+      number-pb
     (if (string= check "XX")
-      (* 2 (string-to-number pb))
+      (* 2 number-pb)
       0)))
 
 (defun dnd-output-ability-constants (table)

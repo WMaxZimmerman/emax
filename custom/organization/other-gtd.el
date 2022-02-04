@@ -4,6 +4,7 @@
 
 (require 'org)
 (require 'org-id)
+(require 'org-ql)
 (require 'dnd)
 
 ;; Functions
