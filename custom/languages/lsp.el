@@ -28,7 +28,7 @@
 ;;(add-hook 'prog-mode-hook #'lsp)
 (defun dotfiles--lsp-deferred-if-supported ()
   "Run `lsp-deferred' if it's a supported mode."
-  (unless (derived-mode-p 'emacs-lisp-mode)
+  (unless (member derived-mode-p ('emacs-lisp-mode 'snippet-mode))
     (lsp-deferred)))
 
 (add-hook 'prog-mode-hook #'dotfiles--lsp-deferred-if-supported)
@@ -41,16 +41,6 @@
 
 
 ;; === YAS ===
-(add-hook 'prog-mode-hook #'yas-minor-mode)
-(setq yas-snippet-dirs (append yas-snippet-dirs
-                               '("~/.emacs.d/yasnippet-csharp")))
-(yas-reload-all)
-
-(defun do-yas-expand ()
-  "Yasnippet expand."
-  (let ((yas-maybe-expand 'return-nil))
-    (yas-expand)))
-
 (defun tab-indent-or-complete ()
   "Auto-complete on tab."
   (interactive)

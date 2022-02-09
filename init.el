@@ -29,18 +29,20 @@
 	 "~/.emacs.d/custom/plugins/smartparens"
 	 "~/.emacs.d/custom/plugins/whitespace"
 	 "~/.emacs.d/custom/plugins/power-mode"
+	 "~/.emacs.d/custom/plugins/mermaid"
 	 "~/.emacs.d/custom/organization/backupfiles"
 	 "~/.emacs.d/custom/organization/other-gtd"
 	 "~/.emacs.d/custom/organization/jira"
 	 "~/.emacs.d/custom/organization/toc"
 	 "~/.emacs.d/custom/keyboard/shortcuts"
-	 "~/.emacs.d/custom/mine/dnd"
+	 "~/Dropbox/dnd-mode/dnd-mode"
 	 "~/.emacs.d/custom/mine/misc"
 	 "~/.emacs.d/custom/settings"
 	 "~/.emacs.d/custom/functions"
 	 "~/.emacs.d/custom/languages/english"
 	 "~/.emacs.d/custom/plugins/writegood-mode"
 	 "~/.emacs.d/custom/plugins/slack"
+	 "~/.emacs.d/custom/plugins/yasnippet"
 	 "~/.emacs.d/custom/organization/ox-reveal"
      ;; === Programming Languages ===
 	 "~/.emacs.d/custom/languages/lsp"
@@ -66,7 +68,7 @@
 (load "~/.emacs.d/custom/keyboard/shortcuts")
 (load "~/.emacs.d/custom/functions")
 (load "~/.emacs.d/custom/settings")
-(load "~/.emacs.d/custom/mine/dnd")
+(load "~/Dropbox/dnd-mode/dnd-mode")
 (load "~/.emacs.d/custom/mine/misc")
 
 ;; === Navigation/Searching ===
@@ -82,6 +84,8 @@
 (load "~/.emacs.d/custom/plugins/smartparens")
 (load "~/.emacs.d/custom/plugins/whitespace")
 (load "~/.emacs.d/custom/plugins/slack")
+(load "~/.emacs.d/custom/plugins/yasnippet")
+(load "~/.emacs.d/custom/plugins/mermaid")
 (load "~/.emacs.d/custom/organization/jira")
 (load "~/.emacs.d/custom/organization/toc")
 
