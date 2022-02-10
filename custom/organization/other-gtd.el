@@ -30,6 +30,9 @@
         ("n" "Note" entry  (file "notes.org")
         ,(concat "* Note (%a)\n"
                  "/Entered on/ %U\n" "\n" "%?"))
+        ("a" "Abbreviation" entry  (file "abbreviations.org")
+        ,(concat "* %? %^g\n"
+                 "/Entered on/ %U\n"))
         ("@" "Inbox [mu4e]" entry (file "inbox.org")
         ,(concat "* TODO Reply to \"%a\" %?\n"
                  "/Entered on/ %U"))))

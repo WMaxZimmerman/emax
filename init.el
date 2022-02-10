@@ -36,6 +36,7 @@
 	 "~/.emacs.d/custom/organization/toc"
 	 "~/.emacs.d/custom/keyboard/shortcuts"
 	 "~/Dropbox/dnd-mode/dnd-mode"
+	 "~/.emacs.d/custom/plugins/dnd"
 	 "~/.emacs.d/custom/mine/misc"
 	 "~/.emacs.d/custom/settings"
 	 "~/.emacs.d/custom/functions"
@@ -69,6 +70,7 @@
 (load "~/.emacs.d/custom/functions")
 (load "~/.emacs.d/custom/settings")
 (load "~/Dropbox/dnd-mode/dnd-mode")
+(load "~/.emacs.d/custom/plugins/dnd")
 (load "~/.emacs.d/custom/mine/misc")
 
 ;; === Navigation/Searching ===
