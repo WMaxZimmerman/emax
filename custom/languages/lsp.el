@@ -71,7 +71,6 @@
 
 (defun debugging-mode ()
   (interactive)
-  (start-remote-delve) ;; I use Go, so need delve remote debugging server to be ready. I couldn't figure out how to replicate `dlv debug my/go/program.go` in the config templates.
   (dap-mode t)
   (dap-ui-mode t)
   (dap-tooltip-mode)
@@ -79,8 +78,7 @@
   (dap-ui-sessions)
   (dap-ui-locals)
   (dap-ui-breakpoints)
-  (dap-ui-repl)
-  )
+  (dap-ui-repl))
 
 
 ;; (dap-register-debug-template "Custome Dotnet"

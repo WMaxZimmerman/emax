@@ -3,10 +3,14 @@
 ;;; Dotnet specific configurations for LSP
 
 ;;; Code:
-
+(require 'dap-netcore)
 
 (define-key lsp-command-map (kbd "t p") 'lsp-csharp-run-test-at-point)
 (define-key lsp-command-map (kbd "t b") 'lsp-csharp-run-all-tests-in-buffer)
+
+;; === DAP ===
+(setq dap-netcore-download-url "https://github.com/Samsung/netcoredbg/releases/download/2.0.0-880/netcoredbg-win64.zip")
+(setq dap-netcore-install-dir "~/.emacs.d/.cache/")
 
 ;; === Functions ===
 (defun find-project-root ()
