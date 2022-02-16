@@ -10,7 +10,14 @@
 
 ;; === DAP ===
 (setq dap-netcore-download-url "https://github.com/Samsung/netcoredbg/releases/download/2.0.0-880/netcoredbg-win64.zip")
-(setq dap-netcore-install-dir "~/.emacs.d/.cache/")
+(setq dap-netcore-install-dir "c:/bench/tools")
+
+;; (dap-register-debug-template "Custome Dotnet"
+;;                              (list :type "coreclr"
+;;                                    :request "launch"
+;;                                    :mode "launch"
+;;                                    :name "NetCoreDbg::Launch"
+;;                                    :justMyCode t))
 
 ;; === Functions ===
 (defun find-project-root ()
