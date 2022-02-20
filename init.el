@@ -28,7 +28,7 @@
 	 "~/.emacs.d/custom/appearance/facelift"
 	 "~/.emacs.d/custom/plugins/smartparens"
 	 "~/.emacs.d/custom/plugins/whitespace"
-	 "~/.emacs.d/custom/plugins/power-mode"
+;;	 "~/.emacs.d/custom/plugins/power-mode"
 	 "~/.emacs.d/custom/plugins/mermaid"
 	 "~/.emacs.d/custom/organization/backupfiles"
 	 "~/.emacs.d/custom/organization/other-gtd"
@@ -80,7 +80,7 @@
 
 ;; === Appearance ===
 (load "~/.emacs.d/custom/appearance/facelift")
-(load "~/.emacs.d/custom/plugins/power-mode")
+;;(load "~/.emacs.d/custom/plugins/power-mode")
 
 ;; === Utility ===
 (load "~/.emacs.d/custom/plugins/smartparens")
