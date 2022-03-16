@@ -90,6 +90,13 @@
       to sync those specific documents to a cloud storage location. These todo / tasks / etc can now be accessed on
       multiple devices. For utilization on phones download and app that is an org file view that can integrate
       with Dropbox. Ex. Orgzly for Android.
+      
+**** RestClient
+     [[https://github.com/pashky/restclient.el][RestClient]] is a tool to manually explore and test HTTP REST services from a plain-text buffer.
+
+***** Common Key Strokes
+      ~C-c C-c~ - run query under cursor
+      ~TAB~ - hide/show current region / request.
 ** IDE
    Emacs is my primary (and for the most part sole) IDE. I have been using emacs for several years now, and, when I
    started, there was a decent amount of configuration and setup need to get languages setup for programming. With the
