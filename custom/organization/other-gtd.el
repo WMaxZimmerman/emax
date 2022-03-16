@@ -19,6 +19,19 @@
 
 (org-my-toggle-agenda-file-set)
 
+;; Calendar
+(require 'calendar)
+(defun calendar-insert-date ()
+  "Insert the date formatted date into buffer"
+  (interactive)
+    (insert (calendar-today-date-string)))
+
+(defun calendar-today-date-string ()
+  "Capture the date at point and return as formatted string"
+  (setq mdy (calendar-current-date))
+  (substring (format "[%02d-%02d-%02d]" (nth 2 mdy) (nth 0 mdy) (nth 1 mdy))
+             0))
+
 ;; Capture
 (setq org-capture-templates
       `(("i" "Inbox" entry  (file "inbox.org")
@@ -30,6 +43,29 @@
         ("n" "Note" entry  (file "notes.org")
         ,(concat "* Note (%a)\n"
                  "/Entered on/ %U\n" "\n" "%?"))
+        ("w" "Weight" entry  (file+olp+datetree "health/weight.org" "Weight")
+        ,(concat "* %? lbs\n" "\n")
+        :tree-type month
+        :kill-buffer t)
+        ("f" "Food" entry  (file+olp+datetree "health/weight.org" "Food")
+         ,(concat "\n* %?\n" "\n")
+        :kill-buffer t)
+        ("c" "Clock In" entry  (file+olp+datetree "work/timesheet.org")
+         ,(concat "\n* start\n" "\n")
+         :kill-buffer t
+         :immediate-finish t
+         :clock-in t
+         :clock-keep t
+         :clock-resume t
+         :tree-type week)
+        ("C" "Clock Out" entry  (clock)
+         ,(concat "* stop" "\n")
+         :kill-buffer t
+         :immediate-finish t
+         :clock-in t
+         :clock-keep t
+         :clock-resume t
+         :tree-type week)
         ("a" "Abbreviation" entry  (file "abbreviations.org")
         ,(concat "* %? %^g\n"
                  "/Entered on/ %U\n"))

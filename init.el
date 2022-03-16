@@ -120,13 +120,6 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   (quote
-    (fsharp-mode latex-preview-pane lsp-sh 0blayout flycheck-plantuml plantuml-mode ox-reveal htmlize flyspell-correct-ivy flyspell-correct nimbus-theme org-d20 multiple-cursors groovy-mode prettier-js add-node-modules-path web-mode tide sly slime-company key-chord py-autopep8 material-theme ein elpy omnisharp magit smartparens yasnippet-snippets yasnippet highlight-parentheses auto-complete projectile better-defaults neotree company counsel ivy use-package))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+   '(fsharp-mode latex-preview-pane lsp-sh 0blayout flycheck-plantuml plantuml-mode ox-reveal htmlize flyspell-correct-ivy flyspell-correct nimbus-theme org-d20 multiple-cursors groovy-mode prettier-js add-node-modules-path web-mode tide sly slime-company key-chord py-autopep8 material-theme ein elpy omnisharp magit smartparens yasnippet-snippets yasnippet highlight-parentheses auto-complete projectile better-defaults neotree company counsel ivy use-package)))
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)

@@ -27,3 +27,8 @@
   (4 8 12 16 20 24 28 32 36 40 44 48 52 56 60 64 68 72 76 80 84 88 92 96 100 104 108 112 116 120)))
 (setq truncate-lines nil)
 (setq truncate-partial-width-windows nil)
+
+;; ==== Custom Quote Block ===
+(custom-set-faces
+ '(org-fontify-quote-and-verse-blocks t)
+ '(org-quote ((t (:inherit org-block :background "slate blue" :foreground "black")))))

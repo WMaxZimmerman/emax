@@ -38,10 +38,10 @@
 ;; === Custom ===
 (setq org-jira-custom-jqls
       '(
-        (:jql " project = OP AND status = \"In Progress\" AND labels = Team2 order by priority DESC "
+        (:jql " project = OP AND status = \"In Progress\" AND labels = Team2 AND NOT issuetype = \"EPIC\" order by priority DESC "
               :limit 100
               :filename "in_progress")
-        (:jql " project = OP AND status = \"Selected for Development\" AND labels = Team2 order by priority DESC "
+        (:jql " project = OP AND status = \"Selected for Development\" AND labels = Team2 AND NOT issueType = \"Epic\" order by Rank "
               :limit 100
               :filename "backlog")
         (:jql " project = OP AND issuetype = Epic AND labels = Team2 order by created DESC "

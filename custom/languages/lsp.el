@@ -10,9 +10,7 @@
 (require 'dap-mode)
 (require 'dap-ui)
 (require 'dap-mouse)
-(require 'dap-netcore)
 (require 'flycheck)
-(require 'lsp-java)
 (require 'yasnippet)
 (require 'company)
 
