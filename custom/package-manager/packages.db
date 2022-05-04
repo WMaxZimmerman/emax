@@ -57,3 +57,4 @@ ob-restclient
 org-ql
 mermaid-mode
 ob-mermaid
+sqlplus

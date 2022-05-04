@@ -37,6 +37,7 @@
 	 "~/.emacs.d/custom/keyboard/shortcuts"
 	 "~/Dropbox/dnd-mode/dnd-mode"
 	 "~/.emacs.d/custom/plugins/dnd"
+	 "~/.emacs.d/custom/organization/ox-dnd"
 	 "~/.emacs.d/custom/mine/misc"
 	 "~/.emacs.d/custom/settings"
 	 "~/.emacs.d/custom/functions"
@@ -100,6 +101,7 @@
 (load "~/.emacs.d/custom/languages/english")
 (load "~/.emacs.d/custom/plugins/writegood-mode")
 (load "~/.emacs.d/custom/organization/ox-reveal")
+(load "~/.emacs.d/custom/organization/ox-dnd")
 
 ;; === Programming ===
 (load "~/.emacs.d/custom/languages/lsp")
