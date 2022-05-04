@@ -39,14 +39,6 @@
                                                                                              ".dll"))))))
 
 
-(dap-register-debug-template "Dotnet Order Management"
-                             (list :type "coreclr"
-                                   :request "launch"
-                                   :mode "launch"
-                                   :name "NetCoreDbg::Launch"
-                                   :justMyCode t
-                                   :program " c:/Users/jtruman/source/repos/Vermeer/dlo-order-management/src/Vermeer.OrderManagement.API/bin/Debug/net6.0/Vermeer.OrderManagement.API.exe"))
-
 ;; === Functions ===
 (defun find-project-root ()
   "Find the root of the current project directory."
