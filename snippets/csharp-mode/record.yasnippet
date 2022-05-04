@@ -1,0 +1,8 @@
+# key: record
+# contributor: Jared Truman
+# name: Record with name from file                             
+# --
+public record ${1:`(file-name-nondirectory (file-name-sans-extension (buffer-file-name)))`}
+{
+    $0
+}

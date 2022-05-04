@@ -12,12 +12,40 @@
 (setq dap-netcore-download-url "https://github.com/Samsung/netcoredbg/releases/download/2.0.0-880/netcoredbg-win64.zip")
 (setq dap-netcore-install-dir "c:/bench/tools")
 
-;; (dap-register-debug-template "Custome Dotnet"
-;;                              (list :type "coreclr"
-;;                                    :request "launch"
-;;                                    :mode "launch"
-;;                                    :name "NetCoreDbg::Launch"
-;;                                    :justMyCode t))
+(add-hook 'lsp-mode-on-hook (lambda () (progn 
+                                         (dap-register-debug-template "Dotnet WEB"
+                                                                      (list :type "coreclr"
+                                                                            :request "launch"
+                                                                            :mode "launch"
+                                                                            :name "NetCoreDbg::Launch"
+                                                                            :justMyCode t
+                                                                            :program (concat (lsp-workspace-root)
+                                                                                             "/"
+                                                                                             (replace-regexp-in-string "\.sln" ".WEB" (nth 0 (directory-files (lsp-workspace-root) nil "\\.sln")))
+                                                                                             "/bin/Debug/net6.0/"
+                                                                                             (replace-regexp-in-string "\.sln" ".WEB" (nth 0 (directory-files (lsp-workspace-root) nil "\\.sln")))
+                                                                                             ".dll")))
+                                         (dap-register-debug-template "Dotnet API"
+                                                                      (list :type "coreclr"
+                                                                            :request "launch"
+                                                                            :mode "launch"
+                                                                            :name "NetCoreDbg::Launch"
+                                                                            :justMyCode t
+                                                                            :program (concat (lsp-workspace-root)
+                                                                                             "/"
+                                                                                             (replace-regexp-in-string "\.sln" ".API" (nth 0 (directory-files (lsp-workspace-root) nil "\\.sln")))
+                                                                                             "/bin/Debug/net6.0/"
+                                                                                             (replace-regexp-in-string "\.sln" ".API" (nth 0 (directory-files (lsp-workspace-root) nil "\\.sln")))
+                                                                                             ".dll"))))))
+
+
+(dap-register-debug-template "Dotnet Order Management"
+                             (list :type "coreclr"
+                                   :request "launch"
+                                   :mode "launch"
+                                   :name "NetCoreDbg::Launch"
+                                   :justMyCode t
+                                   :program " c:/Users/jtruman/source/repos/Vermeer/dlo-order-management/src/Vermeer.OrderManagement.API/bin/Debug/net6.0/Vermeer.OrderManagement.API.exe"))
 
 ;; === Functions ===
 (defun find-project-root ()
