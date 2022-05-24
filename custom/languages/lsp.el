@@ -26,7 +26,7 @@
 ;;(add-hook 'prog-mode-hook #'lsp)
 (defun dotfiles--lsp-deferred-if-supported ()
   "Run `lsp-deferred' if it's a supported mode."
-  (unless (derived-mode-p 'emacs-lisp-mode 'snippet-mode)
+  (unless (derived-mode-p 'emacs-lisp-mode 'snippet-mode 'plantuml-mode)
     (lsp-deferred)))
 
 (add-hook 'prog-mode-hook #'dotfiles--lsp-deferred-if-supported)
