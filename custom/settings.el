@@ -12,7 +12,7 @@
 (setq split-height-threshold nil)
 (setq split-width-threshold 0)
 (electric-pair-mode)
-(server-start)
+;;(server-start)
 
 (auto-save-visited-mode t)
 

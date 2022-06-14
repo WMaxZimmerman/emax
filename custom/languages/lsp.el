@@ -147,7 +147,7 @@
 (load "~/.emacs.d/custom/languages/dotnet")
 (load "~/.emacs.d/custom/languages/angular")
 (load "~/.emacs.d/custom/languages/java")
-
+(load "~/.emacs.d/custom/languages/terraform")
 
 (provide 'lsp)
 

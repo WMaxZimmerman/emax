@@ -10,7 +10,7 @@
 (setq tab-width 4)
 
 ;; === Custom Things ===
-(setq whitespace-line-column 80)
+(setq whitespace-line-column 900)
 (set-default 'truncate-lines t)
 (setq truncate-partial-width-windows nil)
 (load-theme 'nimbus t) ;; load material theme

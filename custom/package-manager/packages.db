@@ -58,3 +58,5 @@ org-ql
 mermaid-mode
 ob-mermaid
 sqlplus
+vscode-dark-plus-theme
+terraform-mode

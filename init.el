@@ -52,6 +52,7 @@
 	 "~/.emacs.d/custom/languages/sql"
 	 "~/.emacs.d/custom/languages/java"
 	 "~/.emacs.d/custom/languages/angular"
+     "~/.emacs.d/custom/languages/terraform"
 	 ;; "~/.emacs.d/custom/languages/csharp"
 	 ;; "~/.emacs.d/custom/languages/typescript"
 	 ;; "~/.emacs.d/custom/languages/react"
@@ -121,7 +122,19 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ansi-color-names-vector
+   ["#454545" "#d65946" "#6aaf50" "#baba36" "#598bc1" "#ab75c3" "#68a5e9" "#aab0ab"])
+ '(custom-enabled-themes '(vscode-dark-plus))
+ '(custom-safe-themes
+   '("5ad3924497d1793b1c7bcfdfc5953a8454217313d6848e70e236172a173b1af6" "9edf53f09bf9ac9c06a1e8abaccf37ddce15ef7a11dc970b54ae9570735525a1" default))
  '(package-selected-packages
    '(fsharp-mode latex-preview-pane lsp-sh 0blayout flycheck-plantuml plantuml-mode ox-reveal htmlize flyspell-correct-ivy flyspell-correct nimbus-theme org-d20 multiple-cursors groovy-mode prettier-js add-node-modules-path web-mode tide sly slime-company key-chord py-autopep8 material-theme ein elpy omnisharp magit smartparens yasnippet-snippets yasnippet highlight-parentheses auto-complete projectile better-defaults neotree company counsel ivy use-package)))
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(org-fontify-quote-and-verse-blocks t)
+ '(org-quote ((t (:inherit org-block :background "slate blue" :foreground "black")))))
