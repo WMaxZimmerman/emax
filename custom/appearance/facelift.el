@@ -14,6 +14,7 @@
 (set-default 'truncate-lines t)
 (setq truncate-partial-width-windows nil)
 (load-theme 'nimbus t) ;; load material theme
+(global-linum-mode 1)
 
 (setq safe-local-variable-values
  (quote
