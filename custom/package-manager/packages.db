@@ -58,3 +58,4 @@ org-ql
 mermaid-mode
 ob-mermaid
 sqlplus
+terraform-mode

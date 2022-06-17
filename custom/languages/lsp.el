@@ -13,6 +13,7 @@
 (require 'flycheck)
 (require 'yasnippet)
 (require 'company)
+(require 'lsp-terraform)
 
 ;; === Prefix ===
 (setq lsp-keymap-prefix "C-c C-l")
@@ -147,6 +148,7 @@
 (load "~/.emacs.d/custom/languages/dotnet")
 (load "~/.emacs.d/custom/languages/angular")
 (load "~/.emacs.d/custom/languages/java")
+(load "~/.emacs.d/custom/languages/terraform")
 
 
 (provide 'lsp)
