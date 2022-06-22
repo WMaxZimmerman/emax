@@ -16,6 +16,10 @@
 (load-theme 'nimbus t) ;; load material theme
 (global-linum-mode 1)
 
+;;Transparent Emacs
+(set-frame-parameter (selected-frame) 'alpha '(95 65))
+(add-to-list 'default-frame-alist '(alpha 95 65))
+
 (setq safe-local-variable-values
  (quote
   ((eval when
