@@ -58,4 +58,6 @@ org-ql
 mermaid-mode
 ob-mermaid
 sqlplus
+sql
+sql-indent
 terraform-mode

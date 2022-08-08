@@ -106,7 +106,7 @@
 
 ;; === Programming ===
 (load "~/.emacs.d/custom/languages/lsp")
-(load "~/.emacs.d/custom/languages/sql")
+;; (load "~/.emacs.d/custom/languages/sql")
 ;; (load "~/.emacs.d/custom/languages/csharp")
 ;; (load "~/.emacs.d/custom/languages/typescript")
 ;; (load "~/.emacs.d/custom/languages/python")
