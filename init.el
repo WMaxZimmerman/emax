@@ -28,7 +28,6 @@
 	 "~/.emacs.d/custom/appearance/facelift"
 	 "~/.emacs.d/custom/plugins/smartparens"
 	 "~/.emacs.d/custom/plugins/whitespace"
-;;	 "~/.emacs.d/custom/plugins/power-mode"
 	 "~/.emacs.d/custom/plugins/mermaid"
 	 "~/.emacs.d/custom/organization/backupfiles"
 	 "~/.emacs.d/custom/organization/other-gtd"
@@ -53,10 +52,6 @@
 	 "~/.emacs.d/custom/languages/java"
 	 "~/.emacs.d/custom/languages/angular"
 	 "~/.emacs.d/custom/languages/terraform"
-	 ;; "~/.emacs.d/custom/languages/csharp"
-	 ;; "~/.emacs.d/custom/languages/typescript"
-	 ;; "~/.emacs.d/custom/languages/react"
-	 ;; "~/.emacs.d/custom/languages/python"
 	 "~/.emacs.d/custom/languages/yaml"
      ;; === Org Babel ===
 	 "~/.emacs.d/custom/organization/org-babel/ob-csharp"
@@ -82,7 +77,6 @@
 
 ;; === Appearance ===
 (load "~/.emacs.d/custom/appearance/facelift")
-;;(load "~/.emacs.d/custom/plugins/power-mode")
 
 ;; === Utility ===
 (load "~/.emacs.d/custom/plugins/smartparens")
@@ -106,11 +100,6 @@
 
 ;; === Programming ===
 (load "~/.emacs.d/custom/languages/lsp")
-;; (load "~/.emacs.d/custom/languages/sql")
-;; (load "~/.emacs.d/custom/languages/csharp")
-;; (load "~/.emacs.d/custom/languages/typescript")
-;; (load "~/.emacs.d/custom/languages/python")
-;; (load "~/.emacs.d/custom/languages/yaml")
 
 ;; === Tools ===
 (load "~/.emacs.d/custom/organization/plantuml-helpers")
