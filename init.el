@@ -35,7 +35,7 @@
 	 "~/.emacs.d/custom/organization/jira"
 	 "~/.emacs.d/custom/organization/toc"
 	 "~/.emacs.d/custom/keyboard/shortcuts"
-	 "~/Dropbox/dnd-mode/dnd-mode"
+;;	 "~/Dropbox/dnd-mode/dnd-mode"
 	 "~/.emacs.d/custom/plugins/dnd"
 	 "~/.emacs.d/custom/organization/ox-dnd"
 	 "~/.emacs.d/custom/mine/misc"
@@ -71,13 +71,13 @@
 (load "~/.emacs.d/custom/keyboard/shortcuts")
 (load "~/.emacs.d/custom/functions")
 (load "~/.emacs.d/custom/settings")
-(load "~/Dropbox/dnd-mode/dnd-mode")
+;;(load "~/Dropbox/dnd-mode/dnd-mode")
 (load "~/.emacs.d/custom/plugins/dnd")
 (load "~/.emacs.d/custom/mine/misc")
 
 ;; === Navigation/Searching ===
 (load "~/.emacs.d/custom/plugins/projectile")
-(load "~/.emacs.d/custom/plugins/dired+")
+;;(load "~/.emacs.d/custom/plugins/dired+")
 (load "~/.emacs.d/custom/plugins/ivy_settings")
 
 ;; === Appearance ===
