@@ -58,5 +58,6 @@ org-ql
 mermaid-mode
 ob-mermaid
 sqlplus
-vscode-dark-plus-theme
+sql
+sql-indent
 terraform-mode

@@ -52,7 +52,7 @@
 	 "~/.emacs.d/custom/languages/sql"
 	 "~/.emacs.d/custom/languages/java"
 	 "~/.emacs.d/custom/languages/angular"
-     "~/.emacs.d/custom/languages/terraform"
+   "~/.emacs.d/custom/languages/terraform"
 	 ;; "~/.emacs.d/custom/languages/csharp"
 	 ;; "~/.emacs.d/custom/languages/typescript"
 	 ;; "~/.emacs.d/custom/languages/react"
@@ -106,7 +106,7 @@
 
 ;; === Programming ===
 (load "~/.emacs.d/custom/languages/lsp")
-(load "~/.emacs.d/custom/languages/sql")
+;; (load "~/.emacs.d/custom/languages/sql")
 ;; (load "~/.emacs.d/custom/languages/csharp")
 ;; (load "~/.emacs.d/custom/languages/typescript")
 ;; (load "~/.emacs.d/custom/languages/python")

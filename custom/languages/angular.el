@@ -4,6 +4,7 @@
 
 ;;; Code:
 ;;(setq lsp-clients-angular-language-server-command nil)
+
 (setq lsp-clients-angular-language-server-command
   '("node"
     "node_modules/@angular/language-server"

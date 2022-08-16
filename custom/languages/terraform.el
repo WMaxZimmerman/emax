@@ -3,8 +3,8 @@
 ;;; Manual Language Server for terraform.
 
 ;;; Code:
-(require 'lsp-terraform)
 (require 'terraform-mode)
+;;(setq lsp-disabled-clients '(tfls))
 
 (provide 'terraform)
 

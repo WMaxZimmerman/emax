@@ -14,6 +14,14 @@
 (electric-pair-mode)
 ;;(server-start)
 
+;; (add-hook 'rectangle-mark-mode-on-hook (lambda () (progn
+;;                                                     (local-set-key (kbd "C-c SPC") 'mc/edit-lines)
+;;                                                     (message "Custom Shortcuts for rectangle On."))))
+
+;; (add-hook 'rectangle-mark-mode-off-hook (lambda () (progn
+;;                                                      (local-unset-key (kbd "C-c SPC") nil)
+;;                                                      (message "Custom Shortcuts for rectangle Off."))))
+
 (auto-save-visited-mode t)
 
 (setq ediff-split-window-function 'split-window-horizontally)

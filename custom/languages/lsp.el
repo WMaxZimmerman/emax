@@ -13,6 +13,7 @@
 (require 'flycheck)
 (require 'yasnippet)
 (require 'company)
+(require 'lsp-terraform)
 
 ;; === Prefix ===
 (setq lsp-keymap-prefix "C-c C-l")
@@ -26,7 +27,7 @@
 ;;(add-hook 'prog-mode-hook #'lsp)
 (defun dotfiles--lsp-deferred-if-supported ()
   "Run `lsp-deferred' if it's a supported mode."
-  (unless (derived-mode-p 'emacs-lisp-mode 'snippet-mode 'plantuml-mode)
+  (unless (derived-mode-p 'emacs-lisp-mode 'snippet-mode 'plantuml-mode 'makefile-mode)
     (lsp-deferred)))
 
 (add-hook 'prog-mode-hook #'dotfiles--lsp-deferred-if-supported)
@@ -148,6 +149,7 @@
 (load "~/.emacs.d/custom/languages/angular")
 (load "~/.emacs.d/custom/languages/java")
 (load "~/.emacs.d/custom/languages/terraform")
+(load "~/.emacs.d/custom/languages/sql")
 
 (provide 'lsp)
 
