@@ -46,3 +46,4 @@ workspace/
 eclipse.jdt.ls/
 request/
 *.data
+ignore/
