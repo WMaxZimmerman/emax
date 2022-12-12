@@ -1,5 +1,6 @@
-(setq dnd-srd-dir "~/Dropbox/org-dnd-srd/")
-(setq dnd-snippet-dir "~/Dropbox/dnd-mode/snippets")
+(setq dnd-srd-dir "~/.emacs.d/ignore/org-dnd-srd/")
+(setq dnd-srd-dir "~/.emacs.d/ignore/org-dnd/")
+(setq dnd-snippet-dir "~/.emacs.d/ignore/dnd-mode/snippets")
 
 (setq dnd-org-capture-templates `(("i" "Inbox" entry  (file "inbox.org")
                                    ,(concat "* TODO %?\n"
