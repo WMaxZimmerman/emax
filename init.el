@@ -32,6 +32,7 @@
 	 "~/.emacs.d/custom/organization/backupfiles"
 	 "~/.emacs.d/custom/organization/other-gtd"
 	 "~/.emacs.d/custom/organization/jira"
+	 "~/.emacs.d/custom/organization/git"
 	 "~/.emacs.d/custom/organization/toc"
 	 "~/.emacs.d/custom/keyboard/shortcuts"
 	 "~/.emacs.d/ignore/dnd-mode/dnd-mode"
@@ -51,6 +52,7 @@
 	 "~/.emacs.d/custom/languages/sql"
 	 "~/.emacs.d/custom/languages/java"
 	 "~/.emacs.d/custom/languages/angular"
+	 "~/.emacs.d/custom/languages/react"
 	 "~/.emacs.d/custom/languages/terraform"
 	 "~/.emacs.d/custom/languages/yaml"
      ;; === Org Babel ===
@@ -85,6 +87,7 @@
 (load "~/.emacs.d/custom/plugins/yasnippet")
 (load "~/.emacs.d/custom/plugins/mermaid")
 (load "~/.emacs.d/custom/organization/jira")
+(load "~/.emacs.d/custom/organization/git")
 (load "~/.emacs.d/custom/organization/toc")
 
 ;; === Org Babel ===

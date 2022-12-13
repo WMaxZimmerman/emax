@@ -42,6 +42,7 @@
 
 (require 'flyspell-correct-ivy)
 (define-key flyspell-mode-map (kbd "C-;") 'flyspell-correct-wrapper)
+(define-key flyspell-mode-map (kbd "C-.") nil)
 
 (provide 'english)
 

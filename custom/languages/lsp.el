@@ -150,6 +150,7 @@
 (load "~/.emacs.d/custom/languages/java")
 (load "~/.emacs.d/custom/languages/terraform")
 (load "~/.emacs.d/custom/languages/sql")
+(load "~/.emacs.d/custom/languages/react")
 
 
 (provide 'lsp)

@@ -1,5 +1,6 @@
 *~
 *.elc
+*.sqlite
 auto-save-list
 recentf
 savehist
@@ -28,6 +29,7 @@ bookmarks
 transient/*
 
 history
+projects
 server/
 recentf
 projectile.cache

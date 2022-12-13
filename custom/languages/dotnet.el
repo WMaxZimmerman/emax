@@ -5,8 +5,18 @@
 ;;; Code:
 (require 'dap-netcore)
 
+
+(push "csharp-ls" lsp-disabled-clients) ;; avoid non-working client
 (define-key lsp-command-map (kbd "t p") 'lsp-csharp-run-test-at-point)
 (define-key lsp-command-map (kbd "t b") 'lsp-csharp-run-all-tests-in-buffer)
+
+
+;; === Blazor ===
+(require 'web-mode)
+(require 'csharp-mode)
+(add-to-list 'auto-mode-alist '("\\.razor\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.razor\\'" . csharp-mode))
+
 
 ;; === DAP ===
 (setq dap-netcore-download-url "https://github.com/Samsung/netcoredbg/releases/download/2.0.0-880/netcoredbg-win64.zip")
@@ -36,7 +46,26 @@
                                                                                              (replace-regexp-in-string "\.sln" ".API" (nth 0 (directory-files (lsp-workspace-root) nil "\\.sln")))
                                                                                              "/bin/Debug/net6.0/"
                                                                                              (replace-regexp-in-string "\.sln" ".API" (nth 0 (directory-files (lsp-workspace-root) nil "\\.sln")))
-                                                                                             ".dll"))))))
+                                                                                             ".dll")))
+                                         (dap-register-debug-template "Dotnet UI"
+                                                                      (list :type "coreclr"
+                                                                            :request "launch"
+                                                                            :mode "launch"
+                                                                            :name "NetCoreDbg::Launch"
+                                                                            :justMyCode t
+                                                                            :program (concat (lsp-workspace-root)
+                                                                                             "/"
+                                                                                             (replace-regexp-in-string "\.sln" ".UI" (nth 0 (directory-files (lsp-workspace-root) nil "\\.sln")))
+                                                                                             "/bin/Debug/net6.0/"
+                                                                                             (replace-regexp-in-string "\.sln" ".UI" (nth 0 (directory-files (lsp-workspace-root) nil "\\.sln")))
+                                                                                             ".dll")))
+                                         (dap-register-debug-template "AVV"
+                                                                      (list :type "coreclr"
+                                                                            :request "launch"
+                                                                            :mode "launch"
+                                                                            :name "NetCoreDbg::Launch"
+                                                                            :justMyCode t
+                                                                            :program (concat (lsp-workspace-root) "/api/avvAPI/bin/Debug/net6.0/avvAPI.dll"))))))
 
 
 ;; === Functions ===

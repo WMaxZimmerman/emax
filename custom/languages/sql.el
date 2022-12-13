@@ -13,7 +13,9 @@
 (setq lsp-sqls-workspace-config-path nil)
 (setq lsp-sqls-connections
       '(((driver . "postgresql")
-         (dataSourceName . "host=127.0.0.1 port=5432 user=postgres password=secret_db_password dbname=postgres sslmode=disable"))
+         (dataSourceName . "host=localhost port=5432 user=postgres password=password dbname=avvdb sslmode=disable"))
+        ((driver . "postgresql")
+         (dataSourceName . "host=localhost port=5432 user=postgres password=password dbname=phyrexian_revokers sslmode=disable"))
         ((driver . "mysql")
          (dataSourceName . "Server=localhost;Database=sammy;User Id=yyoncho;Password=hunter2;"))
         ((driver . "oracle")
@@ -34,6 +36,17 @@
          (sql-password "zDG4M#EQfV_9QYt")
          (sql-database "glvdevel.vermeermfg.com")
          (sql-port 1521))))
+
+;; ============================= ORG ===========================================
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((sql . t)))
+
+;; ((sql-mode . ((sql-postgres-login-params 
+;;   '((user :default "postgres")
+;;     (database :default "avvdb")
+;;     (server :default "localhost")
+;;     (port :default 5432))))))
 
 (add-hook 'sql-interactive-mode-hook
           (lambda ()
