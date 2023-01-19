@@ -36,6 +36,12 @@ projectile.cache
 projectile-bookmarks.eld
 .mc-lists.el
 backup/
+eln-cache/
+eln-cache/*
+eln-cache/**
+org-persist/
+org-persist/*
+org-persist/**
 auto-save-list
 straight/build/
 straight/links/

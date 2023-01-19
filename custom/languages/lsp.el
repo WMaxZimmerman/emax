@@ -23,6 +23,7 @@
 (setq read-process-output-max (* 1024 1024)) ;; 1mb
 (setq lsp-idle-delay 0.500)
 (setq lsp-keep-workspace-alive nil)
+;; (setq lsp-use-plists-alive t)
 
 ;;(add-hook 'prog-mode-hook #'lsp)
 (defun dotfiles--lsp-deferred-if-supported ()
@@ -31,6 +32,11 @@
     (lsp-deferred)))
 
 (add-hook 'prog-mode-hook #'dotfiles--lsp-deferred-if-supported)
+
+(with-eval-after-load 'lsp-mode
+  (add-to-list 'lsp-file-watch-ignored-directories ".*[/\\\\]ClientApp[/\\\\]")
+  (add-to-list 'lsp-file-watch-ignored-directories ".*[/\\\\]working[/\\\\]"))
+
 
 ;; === SQL ===
 ;; (setq lsp-sqls-connections
