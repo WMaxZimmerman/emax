@@ -48,14 +48,14 @@
 	 "~/.emacs.d/custom/plugins/yasnippet"
 	 "~/.emacs.d/custom/organization/ox-reveal"
      ;; === Programming Languages ===
-;;	 "~/.emacs.d/custom/languages/lsp"
-;;	 "~/.emacs.d/custom/languages/dotnet"
-;;	 "~/.emacs.d/custom/languages/sql"
-;;	 "~/.emacs.d/custom/languages/java"
-;;	 "~/.emacs.d/custom/languages/angular"
-;;	 "~/.emacs.d/custom/languages/react"
-;;	 "~/.emacs.d/custom/languages/terraform"
-;;	 "~/.emacs.d/custom/languages/yaml"
+	 "~/.emacs.d/custom/languages/lsp"
+	 "~/.emacs.d/custom/languages/dotnet"
+	 "~/.emacs.d/custom/languages/sql"
+	 "~/.emacs.d/custom/languages/java"
+	 "~/.emacs.d/custom/languages/angular"
+	 "~/.emacs.d/custom/languages/react"
+	 "~/.emacs.d/custom/languages/terraform"
+	 "~/.emacs.d/custom/languages/yaml"
      ;; === Org Babel ===
 	 "~/.emacs.d/custom/organization/org-babel/ob-csharp"
 	 "~/.emacs.d/custom/organization/org-babel/ob-powershell"
@@ -103,8 +103,8 @@
 (load "~/.emacs.d/custom/organization/ox-dnd")
 
 ;; === Programming ===
-;;(load "~/.emacs.d/custom/languages/lsp")
-(load "~/.emacs.d/custom/languages/eglot")
+(load "~/.emacs.d/custom/languages/lsp")
+;;(load "~/.emacs.d/custom/languages/eglot")
 
 ;; === Tools ===
 (load "~/.emacs.d/custom/organization/plantuml-helpers")

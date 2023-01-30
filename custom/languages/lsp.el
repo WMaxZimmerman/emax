@@ -38,6 +38,25 @@
   (add-to-list 'lsp-file-watch-ignored-directories ".*[/\\\\]working[/\\\\]"))
 
 
+;; ==== This tried to have lsp ignore git ignored files ====
+;; (defun ++git-ignore-p (path)
+;;   (let* (; trailing / breaks git check-ignore if path is a symlink:
+;;          (path (directory-file-name path))
+;;          (default-directory (file-name-directory path))
+;;          (relpath (file-name-nondirectory path))
+;;          (cmd (format "git check-ignore '%s'" relpath))
+;;          (status (call-process-shell-command cmd)))
+;;     (eq status 0)))
+
+;; (defun ++lsp--path-is-watchable-directory-a
+;;     (fn path dir ignored-directories)
+;;   (and (not (++git-ignore-p (f-join dir path)))
+;;        (funcall fn path dir ignored-directories)))
+
+;; (advice-add 'lsp--path-is-watchable-directory
+;;             :around #'++lsp--path-is-watchable-directory-a)
+
+
 ;; === SQL ===
 ;; (setq lsp-sqls-connections
 ;;     '(((driver . "oracle") (connectionString . "<PutStuffHere>"))

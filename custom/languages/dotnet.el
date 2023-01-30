@@ -20,7 +20,7 @@
 
 
 ;; === DAP ===
-(setq dap-netcore-download-url "https://github.com/Samsung/netcoredbg/releases/download/2.0.0-880/netcoredbg-win64.zip")
+(setq dap-netcore-download-url "https://github.com/Samsung/netcoredbg/releases/download/2.2.0-961/netcoredbg-win64.zip")
 (setq dap-netcore-install-dir "c:/bench/tools")
 
 (add-hook 'lsp-mode-on-hook (lambda () (progn 

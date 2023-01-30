@@ -33,3 +33,15 @@ there's a region, all lines that region covers will be duplicated."
   (with-temp-buffer
     (insert-file-contents filePath)
     (split-string (buffer-string) "\n" t)))
+
+(defun pair-mode ()
+  "Increases font size and displays line numbers"
+  (interactive)
+  (text-scale-increase 2)
+  (setq display-line-numbers t))
+
+(defun un-pair-mode ()
+  "Decreases font size and removes line numbers"
+  (interactive)
+  (text-scale-increase 0)
+  (setq display-line-numbers nil))
