@@ -20,7 +20,7 @@
 
 
 ;; === DAP ===
-(setq dap-netcore-download-url "https://github.com/Samsung/netcoredbg/releases/download/2.2.0-961/netcoredbg-win64.zip")
+(setq dap-netcore-download-url "https://github.com/Samsung/netcoredbg/releases/download/2.2.3-992/netcoredbg-win64.zip")
 (setq dap-netcore-install-dir "c:/bench/tools")
 
 (add-hook 'lsp-mode-on-hook (lambda () (progn 
@@ -65,8 +65,8 @@
                                                                             :request "launch"
                                                                             :mode "launch"
                                                                             :name "NetCoreDbg::Launch"
-                                                                            :justMyCode t
-                                                                            :program (concat (lsp-workspace-root) "/api/avvAPI/bin/Debug/net6.0/avvAPI.dll"))))))
+                                                                            :program (concat (lsp-workspace-root) "/api/avvAPI/bin/Debug/net6.0/avvAPI.dll")
+                                                                            :dap-compilation "dotnet build")))))
 
 
 ;; === Functions ===

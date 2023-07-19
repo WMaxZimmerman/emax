@@ -13,6 +13,7 @@
 (setq split-width-threshold 0)
 (electric-pair-mode)
 (server-start)
+(global-so-long-mode t)
 
 ;; (add-hook 'rectangle-mark-mode-on-hook (lambda () (progn
 ;;                                                     (local-set-key (kbd "C-c SPC") 'mc/edit-lines)

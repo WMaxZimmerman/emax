@@ -16,6 +16,8 @@
          (dataSourceName . "host=localhost port=5432 user=postgres password=password dbname=avvdb sslmode=disable"))
         ((driver . "postgresql")
          (dataSourceName . "host=localhost port=5432 user=postgres password=password dbname=phyrexian_revokers sslmode=disable"))
+        ((driver . "postgresql")
+         (dataSourceName . "host=phyrexian-revokers-postgres.c1uqwimyphu3.us-east-1.rds.amazonaws.com port=5432 user=postgres password=iE4H6iejFV7VD9D4 dbname=phyrexian_revokers sslmode=disable"))
         ((driver . "mysql")
          (dataSourceName . "Server=localhost;Database=sammy;User Id=yyoncho;Password=hunter2;"))
         ((driver . "oracle")

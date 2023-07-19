@@ -56,6 +56,7 @@
 	 "~/.emacs.d/custom/languages/react"
 	 "~/.emacs.d/custom/languages/terraform"
 	 "~/.emacs.d/custom/languages/yaml"
+	 "~/.emacs.d/custom/languages/org"
      ;; === Org Babel ===
 	 "~/.emacs.d/custom/organization/org-babel/ob-csharp"
 	 "~/.emacs.d/custom/organization/org-babel/ob-powershell"
@@ -95,16 +96,17 @@
 (load "~/.emacs.d/custom/organization/org-babel/ob-csharp")
 (load "~/.emacs.d/custom/organization/org-babel/ob-powershell")
 (load "~/.emacs.d/custom/organization/org-babel/org-babel-settings")
+	 
+;; === Programming ===
+(load "~/.emacs.d/custom/languages/lsp")
+;;(load "~/.emacs.d/custom/languages/eglot")
 
 ;; === Writing ===
 (load "~/.emacs.d/custom/languages/english")
 (load "~/.emacs.d/custom/plugins/writegood-mode")
 (load "~/.emacs.d/custom/organization/ox-reveal")
 (load "~/.emacs.d/custom/organization/ox-dnd")
-
-;; === Programming ===
-(load "~/.emacs.d/custom/languages/lsp")
-;;(load "~/.emacs.d/custom/languages/eglot")
+(load "~/.emacs.d/custom/languages/org")
 
 ;; === Tools ===
 (load "~/.emacs.d/custom/organization/plantuml-helpers")

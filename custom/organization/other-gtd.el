@@ -37,7 +37,7 @@
       `(("i" "Inbox" entry  (file "inbox.org")
         ,(concat "* TODO %?\n"
                  "/Entered on/ %U"))
-        ("m" "Meeting" entry  (file+headline "agenda.org" "Future")
+        ("t" "tickler" entry  (file+headline "tickler.org" "Future")
         ,(concat "* %? :meeting:\n"
                  "<%<%Y-%m-%d %a %H:00>>"))
         ("n" "Note" entry  (file "notes.org")

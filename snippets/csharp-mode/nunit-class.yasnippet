@@ -1,0 +1,18 @@
+# key: class 
+# contributor: Max Zimmerman <william.m.zimmerman@gmail.com>
+# name: NUnit Test class from file name
+# --
+using NUnit.Framework;
+
+namespace `(file-path-to-namespace)`;
+
+[TestFixture]
+public class ${1:`(file-name-nondirectory (file-name-sans-extension (buffer-file-name)))`}
+{
+    $0
+
+    [SetUp]
+    public void SetUp()
+    {
+    }
+}
