@@ -1,10 +1,10 @@
 #+TITLE: EMAX
 
 * Description
-  This is a repository to hold the configuration I use for [[https://www.gnu.org/software/emacs/][emacs]]. This configuration sets up emacs to be used as my
-  primary IDE, Rest Client, Notes System, Jira Interface, and Document Editor. Below I will specify how I accomplish
-  each of these tasks. Feel free to use this configuration if you feel it is helpful. However, it is aimed at solving
-  the needs that I come across.
+  This repository holds the configuration I use for [[https://www.gnu.org/software/emacs/][emacs]]. This configuration sets up emacs to be used as my primary
+  IDE, Rest Client, Notes System, Jira Interface, and Document Editor. Below I will specify how I accomplish each of
+  these tasks. Feel free to use this configuration if you feel it is helpful. However, it is aimed at solving the
+  needs that I come across.
 
   The environment that I find primarily find myself in is doing [[https://dotnet.microsoft.com/en-us/][dotnet]] development on a Windows machine. Because of
   this, my configuration is geared toward this scenario. However, I am using [[https://microsoft.github.io/language-server-protocol/][LSP]] whenever possible for IDE features.
