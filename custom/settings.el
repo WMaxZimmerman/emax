@@ -1,7 +1,7 @@
 (delete-selection-mode 1)
 
-(setq explicit-shell-file-name "C:\\Program Files\\Git\\bin\\bash.exe")
-(setq shell-file-name "C:\\Program Files\\Git\\bin\\bash.exe")
+(setq explicit-shell-file-name "C:\\bench\\tools\\scoop\\apps\\git\\current\\bin\\bash.exe")
+(setq shell-file-name "C:\\bench\\tools\\scoop\\apps\\git\\current\\bin\\bash.exe")
 ;; (setq shell-file-name "/bin/bash")
 (setq explicit-bash.exe-args '("--noediting" "--login" "-i"))
 (setenv "PID" nil)
@@ -26,3 +26,17 @@
 (auto-save-visited-mode t)
 
 (setq ediff-split-window-function 'split-window-horizontally)
+
+
+;; EDiff Settings
+(setq ediff-window-setup-function 'ediff-setup-windows-plain)
+(setq ediff-split-window-function 'split-window-horizontally)
+;; (csetq ediff-diff-options "-w") ignores whitespace
+(defun ora-ediff-hook ()
+  (ediff-setup-keymap)
+  (define-key ediff-mode-map "j" 'ediff-next-difference)
+  (define-key ediff-mode-map "k" 'ediff-previous-difference))
+
+(add-hook 'ediff-mode-hook 'ora-ediff-hook)
+(winner-mode)
+(add-hook 'ediff-after-quit-hook-internal 'winner-undo)
