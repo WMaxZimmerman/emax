@@ -61,3 +61,4 @@ sqlplus
 sql
 sql-indent
 terraform-mode
+gnuplot

@@ -12,5 +12,6 @@
    (powershell . t)
    (python . t)
    (ruby . t)
+   (gnuplot . t)
    (shell . t)
    (restclient . t)))
