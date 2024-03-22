@@ -134,6 +134,7 @@ contextual information."
      ;; Basics
      (let ((ac (org-export-read-attribute :attr_monster_basics monster :ac))
            (hp (org-export-read-attribute :attr_monster_basics monster :hp))
+           (health (org-export-read-attribute :attr_monster_basics monster :health))
            (speed (org-export-read-attribute :attr_monster_basics monster :speed))
            ;; Special speed attributes
            (burrow (org-export-read-attribute :attr_monster_basics monster :burrow))
@@ -143,7 +144,8 @@ contextual information."
            (swim (org-export-read-attribute :attr_monster_basics monster :swim)))
        (concat "\\basics[%\n"
                (format "armorclass = %s,\n" (or ac 0))
-               (format "hitpoints = \\dice{%s},\n" (or hp 0))
+               (when hp (format "hitpoints = \\dice{%s},\n" hp))
+               (when health (format "hitpoints = %s,\n" health))
                (format "speed = {%s ft." (or speed 0))
                (when burrow (format ", burrow %s ft." burrow))
                (when climb (format ", climb %s ft." climb))
@@ -171,7 +173,8 @@ contextual information."
      ;; Details
      (let ((skills (org-export-read-attribute :attr_monster_details monster :skills))
            (saves (org-export-read-attribute :attr_monster_details monster :saves))
-           (imm (org-export-read-attribute :attr_monster_details monster :imm))
+           (conimm (org-export-read-attribute :attr_monster_details monster :conimm))
+           (dmgimm (org-export-read-attribute :attr_monster_details monster :dmgimm))
            (res (org-export-read-attribute :attr_monster_details monster :res))
            (vul (org-export-read-attribute :attr_monster_details monster :vul))
            (senses (org-export-read-attribute :attr_monster_details monster :senses))
@@ -180,7 +183,8 @@ contextual information."
        (concat "\\details[%\n"
                (when skills (format "skills = {%s},\n" skills))
                (when saves (format "savingthrows = {%s},\n" saves))
-               (when imm (format "conditionimmunities = {%s},\n" imm))
+               (when conimm (format "conditionimmunities = {%s},\n" conimm))
+               (when dmgimm (format "damageimmunities = {%s},\n" dmgimm))
                (when res (format "damageresistances = {%s},\n" res))
                (when vul (format "damagevulnerabilities = {%s},\n" vul))
                (when senses (format "senses = {%s},\n" senses))

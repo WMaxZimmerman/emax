@@ -1,7 +1,7 @@
 (delete-selection-mode 1)
 
-(setq explicit-shell-file-name "C:\\bench\\tools\\scoop\\apps\\git\\current\\bin\\bash.exe")
-(setq shell-file-name "C:\\bench\\tools\\scoop\\apps\\git\\current\\bin\\bash.exe")
+(setq explicit-shell-file-name "C:\\Program Files\\Git\\usr\\bin\\bash.exe")
+(setq shell-file-name "C:\\Program Files\\Git\\usr\\bin\\bash.exe")
 ;; (setq shell-file-name "/bin/bash")
 (setq explicit-bash.exe-args '("--noediting" "--login" "-i"))
 (setenv "PID" nil)
