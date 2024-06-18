@@ -4,12 +4,7 @@
 
 (require 'magit)
 
-
-(with-eval-after-load 'magit (require 'forge))
-
-(push '("github.deere.com" "github.deere.com/api/v3"
-        "github.deere.com" forge-github-repository)
-        forge-alist)
+;; Sometime maybe do some custom things with Forge
 
 (provide 'git)
 

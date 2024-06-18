@@ -1,11 +1,13 @@
 (delete-selection-mode 1)
 
-(setq explicit-shell-file-name "C:\\Program Files\\Git\\usr\\bin\\bash.exe")
-(setq shell-file-name "C:\\Program Files\\Git\\usr\\bin\\bash.exe")
-;; (setq shell-file-name "/bin/bash")
-(setq explicit-bash.exe-args '("--noediting" "--login" "-i"))
-(setenv "PID" nil)
-;; (setenv "SHELL" shell-file-name)
+(if (eq system-type 'windows-nt)
+    (progn
+      (setq explicit-shell-file-name "C:\\Program Files\\Git\\usr\\bin\\bash.exe")
+      (setq shell-file-name "C:\\Program Files\\Git\\usr\\bin\\bash.exe")
+      (setq explicit-bash.exe-args '("--noediting" "--login" "-i"))
+      (setenv "PID" nil)
+      )
+)
 
 (add-hook 'comint-output-filter-functions 'comint-strip-ctrl-m)
 (global-set-key [f1] 'shell)

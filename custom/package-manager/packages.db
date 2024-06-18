@@ -18,7 +18,6 @@ yasnippet
 yasnippet-snippets
 smartparens
 magit
-forge
 elpy
 ein
 flycheck
@@ -47,7 +46,6 @@ ejc-sql
 ess
 oauth2
 alert
-slack
 request
 websocket
 yaml-mode
