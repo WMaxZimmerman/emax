@@ -2,8 +2,8 @@
 
 (if (eq system-type 'windows-nt)
     (progn
-      (setq explicit-shell-file-name "C:\\Program Files\\Git\\usr\\bin\\bash.exe")
-      (setq shell-file-name "C:\\Program Files\\Git\\usr\\bin\\bash.exe")
+      (setq explicit-shell-file-name "C:\\bench\\tools\\scoop\\apps\\git\\current\\bin\\bash.exe")
+      (setq shell-file-name "C:\\bench\\tools\\scoop\\apps\\git\\current\\bin\\bash.exe")
       (setq explicit-bash.exe-args '("--noediting" "--login" "-i"))
       (setenv "PID" nil)
       )
