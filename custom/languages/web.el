@@ -14,6 +14,7 @@
 ;; === Framework Specifics ===
 (load "~/.emacs.d/custom/languages/angular")
 (load "~/.emacs.d/custom/languages/react")
+(load "~/.emacs.d/custom/languages/typescript")
 
 (provide 'angular)
 

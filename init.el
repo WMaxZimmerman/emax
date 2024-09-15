@@ -1,6 +1,4 @@
 ;; === SETUP ===
-(setq lsp-keymap-prefix "C-c C-l")
-;; (setq lsp-use-plists t)
 (load "~/.emacs.d/straight/bootstrap")
 (straight-use-package '(org :type built-in))
 
@@ -31,7 +29,7 @@
 	 "~/.emacs.d/custom/plugins/whitespace"
 	 "~/.emacs.d/custom/plugins/mermaid"
 	 "~/.emacs.d/custom/organization/backupfiles"
-	 "~/.emacs.d/custom/organization/other-gtd"
+;;	 "~/.emacs.d/custom/organization/other-gtd"
 	 "~/.emacs.d/custom/organization/jira"
 	 "~/.emacs.d/custom/organization/git"
 	 "~/.emacs.d/custom/organization/toc"
@@ -50,11 +48,16 @@
      ;; === Programming Languages ===
 	 "~/.emacs.d/custom/languages/lsp"
 	 "~/.emacs.d/custom/languages/dotnet"
+	 "~/.emacs.d/custom/languages/dotnet-dap"
 	 "~/.emacs.d/custom/languages/sql"
 	 "~/.emacs.d/custom/languages/java"
+	 "~/.emacs.d/custom/languages/web"
 	 "~/.emacs.d/custom/languages/angular"
 	 "~/.emacs.d/custom/languages/react"
+	 "~/.emacs.d/custom/languages/typescript"
 	 "~/.emacs.d/custom/languages/terraform"
+	 "~/.emacs.d/custom/languages/postgres"
+	 "~/.emacs.d/custom/languages/python"
 	 "~/.emacs.d/custom/languages/yaml"
 	 "~/.emacs.d/custom/languages/org"
      ;; === Org Babel ===
@@ -66,7 +69,7 @@
 
 ;; === Custom Scripts ===
 (load "~/.emacs.d/custom/organization/backupfiles")
-(load "~/.emacs.d/custom/organization/other-gtd")
+;;(load "~/.emacs.d/custom/organization/other-gtd")
 (load "~/.emacs.d/custom/keyboard/shortcuts")
 (load "~/.emacs.d/custom/functions")
 (load "~/.emacs.d/custom/settings")
@@ -99,7 +102,6 @@
 	 
 ;; === Programming ===
 (load "~/.emacs.d/custom/languages/lsp")
-;;(load "~/.emacs.d/custom/languages/eglot")
 
 ;; === Writing ===
 (load "~/.emacs.d/custom/languages/english")

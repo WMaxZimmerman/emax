@@ -1,3 +1,10 @@
+;; Disable package.el in favor of straight.el
+(setq package-enable-at-startup nil)
+
+;; Set branch to develop for native compile
+(setq straight-repository-branch "develop")
+
+;; Install straight.el
 (defvar bootstrap-version)
 (let ((bootstrap-file
        (expand-file-name "straight/repos/straight.el/bootstrap.el" user-emacs-directory))

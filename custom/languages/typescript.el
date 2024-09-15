@@ -1,3 +1,7 @@
+;;; package --- typescript
+;;; Commentary:
+;;; Settings for typescript
+
 (require 'tide)
 
 (defun setup-tide-mode ()
@@ -22,3 +26,6 @@
 
 ;; Formatting
 (setq tide-format-options '(:insertSpaceAfterFunctionKeywordForAnonymousFunctions t :placeOpenBraceOnNewLineForFunctions nil))
+
+
+;;; typescript.el ends here

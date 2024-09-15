@@ -97,6 +97,9 @@
     )
   )
 
+
+(load "~/.emacs.d/custom/languages/dotnet-dap")
+
 (provide 'dotnet)
 
 ;;; dotnet.el ends here

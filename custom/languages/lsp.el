@@ -2,6 +2,8 @@
 ;;; Commentary:
 ;;; Provides IDE features for multiple language
 
+;;; Code:
+
 
 (require 'lsp-mode)
 (require 'lsp-ui)
@@ -16,7 +18,8 @@
 (require 'lsp-terraform)
 
 ;; === Prefix ===
-(setq lsp-keymap-prefix "C-c C-l")
+(define-key lsp-mode-map (kbd "C-c C-l") lsp-command-map)
+;; (setq lsp-use-plists t)
 
 ;; === Performance ===
 (setq gc-cons-threshold 100000000)
@@ -171,11 +174,12 @@
 
 ;; === Language Specifics ===
 (load "~/.emacs.d/custom/languages/dotnet")
-(load "~/.emacs.d/custom/languages/angular")
+(load "~/.emacs.d/custom/languages/web")
 (load "~/.emacs.d/custom/languages/java")
 (load "~/.emacs.d/custom/languages/terraform")
 (load "~/.emacs.d/custom/languages/sql")
-(load "~/.emacs.d/custom/languages/react")
+(load "~/.emacs.d/custom/languages/postgres")
+(load "~/.emacs.d/custom/languages/python")
 
 
 (provide 'lsp)
