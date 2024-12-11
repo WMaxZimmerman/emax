@@ -180,6 +180,7 @@
 (load "~/.emacs.d/custom/languages/sql")
 (load "~/.emacs.d/custom/languages/postgres")
 (load "~/.emacs.d/custom/languages/python")
+(load "~/.emacs.d/custom/languages/web")
 
 
 (provide 'lsp)

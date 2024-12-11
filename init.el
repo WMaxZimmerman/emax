@@ -34,7 +34,7 @@
 	 "~/.emacs.d/custom/organization/git"
 	 "~/.emacs.d/custom/organization/toc"
 	 "~/.emacs.d/custom/keyboard/shortcuts"
-	 "~/.emacs.d/ignore/dnd-mode/dnd-mode"
+	 ;;"~/.emacs.d/ignore/dnd-mode/dnd-mode"
 	 "~/.emacs.d/custom/plugins/dnd"
 	 "~/.emacs.d/custom/organization/ox-dnd"
 	 "~/.emacs.d/custom/mine/misc"

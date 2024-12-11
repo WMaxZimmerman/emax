@@ -2,30 +2,42 @@
 ;;; Commentary:
 ;;; Settings for typescript
 
-(require 'tide)
+(require 'dap-node)
+;;(require 'dap-chrome)
+(unless (file-exists-p dap-node-debug-path) (dap-node-setup))
+;;(dap-chrome-setup)
 
-(defun setup-tide-mode ()
-  (interactive)
-  (tide-setup)
-  (flycheck-mode +1)
-  (setq flycheck-check-syntax-automatically '(save mode-enabled))
-  (eldoc-mode +1)
-  (tide-hl-identifier-mode +1)
-  ;; company is an optional dependency. You have to
-  ;; install it separately via package-install
-  ;; `M-x package-install [ret] company`
-  (company-mode +1))
+(if (file-exists-p (nth 1 dap-node-debug-program))
+    (message "NodeJS debugger successfully installed")
+  (message "NodeJS debugger install failed. Please download it manually"))
 
-;; aligns annotation to the right hand side
-(setq company-tooltip-align-annotations t)
+;; (if (file-exists-p (nth 1 dap-chrome-debug-program))
+;;     (message "Chrome debugger successfully installed")
+;;   (message "Chrome debugger install failed. Please download it manually"))
 
-;; formats the buffer before saving
-(add-hook 'before-save-hook 'tide-format-before-save)
+;; (dap-register-debug-template
+;;   "Node Typscript"
+;;   (list :type "node"
+;;         :request "launch"
+;;         :program "/c/bench/git/la-casita/test/src/index.ts"
+;;         :outFiles ["/c/bench/git/la-casita/test/dist/**/*.js"]
+;;         :name "Node Typescript"))
 
-(add-hook 'typescript-mode-hook #'setup-tide-mode)
+(dap-register-debug-template "Node Attach"
+    (list :type "node"
+          :request "attach"
+          :port 9229
+          :name "Node Attach"
+          :sourceMaps t
+          :program "${workspaceFolder}/src/index.ts"
+          :skipFiles ["<node_internals>/**"]
+          :cwd "${workspaceFolder}"
+          :remoteRoot "${workspaceFolder}"
+          :localRoot "${workspaceFolder}"
+          :outFiles ["${workspaceFolder}/dist"]
+          ))
 
-;; Formatting
-(setq tide-format-options '(:insertSpaceAfterFunctionKeywordForAnonymousFunctions t :placeOpenBraceOnNewLineForFunctions nil))
 
 
-;;; typescript.el ends here
+;; (add-hook 'typescript-mode-hook 'lsp-deferred)
+;; (add-hook 'javascript-mode-hook 'lsp-deferred)

@@ -3,13 +3,14 @@
 (if (eq system-type 'windows-nt)
     (progn
       (setq explicit-shell-file-name "C:\\bench\\tools\\scoop\\apps\\git\\current\\bin\\bash.exe")
-      (setq shell-file-name "C:\\bench\\tools\\scoop\\apps\\git\\current\\bin\\bash.exe")
-      (setq explicit-bash.exe-args '("--noediting" "--login" "-i"))
-      (setenv "PID" nil)
+      ;;(setq shell-file-name "C:\\bench\\tools\\scoop\\apps\\git\\current\\bin\\bash.exe")
+      (setq shell-file-name "bash")
+      ;;(setq explicit-bash.exe-args '("--noediting" "--login" "-i"))
+      ;;(setenv "PID" nil)
       )
 )
 
-(add-hook 'comint-output-filter-functions 'comint-strip-ctrl-m)
+;;(add-hook 'comint-output-filter-functions 'comint-strip-ctrl-m)
 (global-set-key [f1] 'shell)
 (setq split-height-threshold nil)
 (setq split-width-threshold 0)

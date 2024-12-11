@@ -37,6 +37,10 @@
       `(("i" "Inbox" entry  (file "inbox.org")
         ,(concat "* TODO %?\n"
                  "/Entered on/ %U"))
+        ("d" "tech-debt" entry  (file "inbox.org")
+         ,(concat "* TODO %?   :tech_debt: \n"
+                  "- location :: [[file:%F][here]] \n"
+                  "- date :: %U"))
         ("t" "tickler" entry  (file+headline "tickler.org" "Future")
         ,(concat "* %? :meeting:\n"
                  "<%<%Y-%m-%d %a %H:00>>"))
@@ -90,6 +94,7 @@
 (define-key global-map            (kbd "C-c a") 'org-agenda)
 (define-key global-map            (kbd "C-c c") 'org-capture)
 (define-key global-map            (kbd "C-c i") 'org-capture-inbox)
+(define-key global-map            (kbd "C-c e") 'org-table-recalculate-buffer-tables)
 
 ;; Only if you use mu4e
 ;; (require 'mu4e)
