@@ -40,6 +40,9 @@
   (define-key ediff-mode-map "j" 'ediff-next-difference)
   (define-key ediff-mode-map "k" 'ediff-previous-difference))
 
+;; ======== Org Shit =========
+(define-key global-map (kbd "C-c e") 'org-table-recalculate-buffer-tables)
+
 (add-hook 'ediff-mode-hook 'ora-ediff-hook)
 (winner-mode)
 (add-hook 'ediff-after-quit-hook-internal 'winner-undo)
