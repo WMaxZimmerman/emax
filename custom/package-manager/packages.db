@@ -60,5 +60,4 @@ sql
 sql-indent
 terraform-mode
 gnuplot
-graphql-mode
 json-mode
