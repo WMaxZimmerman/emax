@@ -41,6 +41,32 @@
   (kill-region (region-beginning) (region-end))
   (insert new-text))
 
+(defun org-export-json ()
+  "Tangle JSON blocks into files named using their level 1 and level 2 headers."
+  (interactive)
+  (let ((org-tree (org-element-parse-buffer)))
+    (org-element-map org-tree 'headline
+      (lambda (lvl1)
+        (when (= 1 (org-element-property :level lvl1))
+          (let ((h1 (org-element-property :raw-value lvl1)))
+            (org-element-map (org-element-contents lvl1) 'headline
+              (lambda (lvl2)
+                (when (= 2 (org-element-property :level lvl2))
+                  (let ((h2 (org-element-property :raw-value lvl2)))
+                    ;; Build slugified name
+                    (let* ((slug (lambda (s)
+                                   (downcase (replace-regexp-in-string "[^a-zA-Z0-9]+" "-" s))))
+                           (filename (format "%s-%s.json" (funcall slug h1) (funcall slug h2))))
+                      ;; Search for JSON block
+                      (org-element-map (org-element-contents lvl2) 'src-block
+                        (lambda (block)
+                          (when (string= (org-element-property :language block) "json")
+                            (let ((json-content (org-element-property :value block)))
+                              (with-temp-file filename
+                                (insert json-content))
+                              (message "Exported: %s" filename))))
+                        nil t))))))))))))
+
 (defun org-eval-buffer ()
   "Evaluates the current org buffer"
   (interactive)
