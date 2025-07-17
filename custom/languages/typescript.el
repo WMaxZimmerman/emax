@@ -34,10 +34,6 @@
           :cwd "${workspaceFolder}"
           :remoteRoot "${workspaceFolder}"
           :localRoot "${workspaceFolder}"
-          :outFiles ["${workspaceFolder}/dist"]
-          ))
+          :outFiles ["${workspaceFolder}/dist"]))
 
 
-
-;; (add-hook 'typescript-mode-hook 'lsp-deferred)
-;; (add-hook 'javascript-mode-hook 'lsp-deferred)

@@ -50,17 +50,8 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
   (let ((yas/fallback-behavior 'return-nil))
     (yas/expand)))
 
-(defun tab-indent-or-complete ()
-  (interactive)
-  (if (minibufferp)
-      (minibuffer-complete)
-    (if (or (not yas/minor-mode)
-            (null (do-yas-expand)))
-        (if (check-expansion)
-            (company-complete-common)
-          (indent-for-tab-command)))))
 
-(define-key company-active-map (kbd "<tab>") 'tab-indent-or-complete)
+;; (define-key company-active-map (kbd "<tab>") 'tab-indent-or-complete)
 (setq yas-snippet-dirs
       '("~/.emacs.d/yasnippet-csharp"))
 
@@ -152,9 +143,17 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (projectile-global-mode)
 (setq projectile-indexing-method 'alien)
 
-(setq c-basic-offset 4) ; indents 4 chars
-(setq tab-width 4)          ; and 4 char wide for TAB
-(setq indent-tabs-mode nil) ; And force use of spaces
+;; Default indentation settings (can be overridden by specific modes)
+(setq-default c-basic-offset 4) ; indents 4 chars for C-like languages
+(setq-default tab-width 4)      ; and 4 char wide for TAB
+(setq-default indent-tabs-mode nil) ; And force use of spaces
+
+;; C# specific settings
+(add-hook 'csharp-mode-hook
+          (lambda ()
+            (setq c-basic-offset 4)
+            (setq tab-width 4)
+            (setq indent-tabs-mode nil)))
 
 (defun load-directory (directory)
   "Load recursively all `.el' files in DIRECTORY."

@@ -100,6 +100,15 @@
 
 (load "~/.emacs.d/custom/languages/dotnet-dap")
 
+(defun dotnet-setup-indentation ()
+  "Setup 4-space indentation for C# files"
+  (setq-local c-basic-offset 4)
+  (setq-local tab-width 4)
+  (setq-local indent-tabs-mode nil)
+  (setq-local standard-indent 4))
+
+(add-hook 'csharp-mode-hook 'dotnet-setup-indentation)
+
 (provide 'dotnet)
 
 ;;; dotnet.el ends here

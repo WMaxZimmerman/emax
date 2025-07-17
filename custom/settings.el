@@ -1,5 +1,11 @@
 (delete-selection-mode 1)
 
+;; Global indentation defaults
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 2)
+(setq-default c-basic-offset 2)
+(setq-default standard-indent 2)
+
 (if (eq system-type 'windows-nt)
     (progn
       ;;(setq explicit-shell-file-name "C:\\bench\\tools\\scoop\\apps\\git\\current\\bin\\bash.exe")
@@ -7,8 +13,8 @@
       ;;(setq shell-file-name "bash")
       ;;(setq explicit-bash.exe-args '("--noediting" "--login" "-i"))
       ;;(setenv "PID" nil)
-      (setq explicit-shell-file-name "C:\\Program Files\\Git\\bin\\bash.exe")
-      (setq shell-file-name "C:\\Program Files\\Git\\bin\\bash.exe")
+      (setq explicit-shell-file-name "C:\\bench\\tools\\scoop\\apps\\git\\current\\bin\\bash.exe")
+      (setq shell-file-name "C:\\bench\\tools\\scoop\\apps\\git\\current\\bin\\bash.exe")
       (setq explicit-bash.exe-args '("--noediting" "--login" "-i"))
       (setenv "PID" nil)
       )

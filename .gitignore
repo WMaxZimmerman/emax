@@ -56,3 +56,4 @@ request/
 *.data
 ignore/
 .extension/
+.aider*

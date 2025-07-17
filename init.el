@@ -28,6 +28,8 @@
 	 "~/.emacs.d/custom/plugins/smartparens"
 	 "~/.emacs.d/custom/plugins/whitespace"
 	 "~/.emacs.d/custom/plugins/mermaid"
+	 ;;"~/.emacs.d/custom/plugins/claude-ai"
+	 "~/.emacs.d/custom/plugins/aider"
 	 "~/.emacs.d/custom/organization/backupfiles"
 ;;	 "~/.emacs.d/custom/organization/other-gtd"
 	 "~/.emacs.d/custom/organization/jira"
@@ -91,6 +93,8 @@
 ;;(load "~/.emacs.d/custom/plugins/slack")
 (load "~/.emacs.d/custom/plugins/yasnippet")
 (load "~/.emacs.d/custom/plugins/mermaid")
+;;(load "~/.emacs.d/custom/plugins/claude-ai")
+(load "~/.emacs.d/custom/plugins/aider")
 (load "~/.emacs.d/custom/organization/jira")
 (load "~/.emacs.d/custom/organization/git")
 (load "~/.emacs.d/custom/organization/toc")
@@ -102,6 +106,7 @@
 	 
 ;; === Programming ===
 (load "~/.emacs.d/custom/languages/lsp")
+;;(load "~/.emacs.d/custom/languages/web")
 
 ;; === Writing ===
 (load "~/.emacs.d/custom/languages/english")

@@ -15,3 +15,5 @@
    (gnuplot . t)
    (shell . t)
    (restclient . t)))
+
+(setq org-babel-restclient--jq-path "/c/bench/tools/scoop/shims/jq.exe")
