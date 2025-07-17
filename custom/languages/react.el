@@ -83,8 +83,6 @@
 (with-eval-after-load 'prettier-js
   (setq prettier-js-args '("--tab-width" "2" "--use-tabs" "false")))
 
-;;(add-hook 'web-mode-hook  'emmet-mode)
-
 (defun debug-web-mode-indentation ()
   "Debug current indentation settings in web-mode"
   (interactive)

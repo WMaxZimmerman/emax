@@ -28,15 +28,12 @@
 	 "~/.emacs.d/custom/plugins/smartparens"
 	 "~/.emacs.d/custom/plugins/whitespace"
 	 "~/.emacs.d/custom/plugins/mermaid"
-	 ;;"~/.emacs.d/custom/plugins/claude-ai"
 	 "~/.emacs.d/custom/plugins/aider"
 	 "~/.emacs.d/custom/organization/backupfiles"
-;;	 "~/.emacs.d/custom/organization/other-gtd"
 	 "~/.emacs.d/custom/organization/jira"
 	 "~/.emacs.d/custom/organization/git"
 	 "~/.emacs.d/custom/organization/toc"
 	 "~/.emacs.d/custom/keyboard/shortcuts"
-	 ;;"~/.emacs.d/ignore/dnd-mode/dnd-mode"
 	 "~/.emacs.d/custom/plugins/dnd"
 	 "~/.emacs.d/custom/organization/ox-dnd"
 	 "~/.emacs.d/custom/mine/misc"
@@ -44,7 +41,6 @@
 	 "~/.emacs.d/custom/functions"
 	 "~/.emacs.d/custom/languages/english"
 	 "~/.emacs.d/custom/plugins/writegood-mode"
-	 ;;"~/.emacs.d/custom/plugins/slack"
 	 "~/.emacs.d/custom/plugins/yasnippet"
 	 "~/.emacs.d/custom/organization/ox-reveal"
      ;; === Programming Languages ===
@@ -71,7 +67,6 @@
 
 ;; === Custom Scripts ===
 (load "~/.emacs.d/custom/organization/backupfiles")
-;;(load "~/.emacs.d/custom/organization/other-gtd")
 (load "~/.emacs.d/custom/keyboard/shortcuts")
 (load "~/.emacs.d/custom/functions")
 (load "~/.emacs.d/custom/settings")
@@ -90,10 +85,8 @@
 ;; === Utility ===
 (load "~/.emacs.d/custom/plugins/smartparens")
 (load "~/.emacs.d/custom/plugins/whitespace")
-;;(load "~/.emacs.d/custom/plugins/slack")
 (load "~/.emacs.d/custom/plugins/yasnippet")
 (load "~/.emacs.d/custom/plugins/mermaid")
-;;(load "~/.emacs.d/custom/plugins/claude-ai")
 (load "~/.emacs.d/custom/plugins/aider")
 (load "~/.emacs.d/custom/organization/jira")
 (load "~/.emacs.d/custom/organization/git")
@@ -106,7 +99,6 @@
 	 
 ;; === Programming ===
 (load "~/.emacs.d/custom/languages/lsp")
-;;(load "~/.emacs.d/custom/languages/web")
 
 ;; === Writing ===
 (load "~/.emacs.d/custom/languages/english")

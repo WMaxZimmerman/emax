@@ -6,15 +6,12 @@
 (require 'dap-netcore)
 
 
-;; (push "csharp-ls" lsp-disabled-clients) ;; avoid non-working client
 (define-key lsp-command-map (kbd "t p") 'lsp-csharp-run-test-at-point)
 (define-key lsp-command-map (kbd "t b") 'lsp-csharp-run-all-tests-in-buffer)
-;;(setq lsp-csharp-server-path "~/.emacs.d/.cache/lsp/omnisharp-roslyn/latest/omnisharp-roslyn/OmniSharp.exe")
 
 
 ;; === Blazor ===
 (require 'web-mode)
-;;(require 'csharp-mode)
 (add-to-list 'auto-mode-alist '("\\.razor\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.razor\\'" . csharp-mode))
 

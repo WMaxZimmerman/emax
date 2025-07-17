@@ -4,8 +4,6 @@
 
 (require 'magit)
 
-;; Sometime maybe do some custom things with Forge
-
 (provide 'git)
 
 ;;; git.el ends here
