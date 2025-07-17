@@ -7,7 +7,6 @@
 (require 'ob)
 (require 'ob-core)
 
-;;(setq plantuml-jar-path "~/.emacs.d/tools/plantuml/plantuml.jar")
 (setq org-plantuml-jar-path (expand-file-name "~/.emacs.d/tools/plantuml/plantuml.jar"))
 (add-to-list 'org-src-lang-modes '("plantuml" . plantuml))
 (org-babel-do-load-languages 'org-babel-load-languages '((plantuml . t)))

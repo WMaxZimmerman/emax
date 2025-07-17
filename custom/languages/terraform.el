@@ -4,7 +4,6 @@
 
 ;;; Code:
 (require 'terraform-mode)
-;;(setq lsp-disabled-clients '(tfls))
 
 (provide 'terraform)
 

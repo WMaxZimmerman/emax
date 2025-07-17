@@ -1,4 +1,3 @@
-;;(setenv "ANTHROPIC_API_KEY" "sk-...")
 (setq aidermacs-default-chat-mode 'architect)
 (setq aidermacs-default-model "sonnet")
 (setq aidermacs-auto-accept-architect t)
