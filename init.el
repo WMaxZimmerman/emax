@@ -13,14 +13,21 @@
 
 (defun compile-if-no-compiled-file (path)
   "Check if a compiled file exists at PATH and create one if not or it is old."
-  (if (check-for-compiled-file path)
-      (if (file-newer-than-file-p (concat path ".el") (concat path ".elc"))
-        (byte-compile-file (concat path ".el")))
-      (byte-compile-file (concat path ".el"))))
+  (let ((el-file (concat path ".el"))
+        (elc-file (concat path ".elc")))
+    (when (file-exists-p el-file)  ; Only compile if .el file exists
+      (if (file-exists-p elc-file)
+          (when (file-newer-than-file-p el-file elc-file)
+            (byte-compile-file el-file))
+        (byte-compile-file el-file)))))
 
 (defun ensure-scripts-are-compiled()
   "Ensures that all scripts are compiled."
-  (mapc 'compile-if-no-compiled-file (list
+  (mapc (lambda (path)
+          (condition-case err
+              (compile-if-no-compiled-file path)
+            (error (message "Failed to compile %s: %s" path (error-message-string err)))))
+        (list
 	 "~/.emacs.d/custom/package-manager/package-manager"
 	 "~/.emacs.d/custom/plugins/projectile"
 	 "~/.emacs.d/custom/plugins/ivy_settings"

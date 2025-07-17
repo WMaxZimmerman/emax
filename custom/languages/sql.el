@@ -23,21 +23,22 @@
         ((driver . "oracle")
          (dataSourceName . "Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=glvdeveldb.vermeermfg.com)(PORT=1521))(LOAD_BALANCE=yes)(CONNECT_DATA=(SERVER=DEDICATED) (SERVICE_NAME=glvdevel.vermeermfg.com)));User Id=WEB_API;Password=zDG4M#EQfV_9QYt;"))))
 
-(setq sql-connection-alist
-      '((pool-a
-         (sql-product 'postgresql)
-         (sql-server "127.0.0.1")
-         (sql-user "postgres")
-         (sql-password "secret_db_password")
-         (sql-database "postgres")
-         (sql-port 5432))
-        (pool-a
-         (sql-product 'oracle)
-         (sql-server "glvdeveldb.vermeermfg.com")
-         (sql-user "WEB_API")
-         (sql-password "zDG4M#EQfV_9QYt")
-         (sql-database "glvdevel.vermeermfg.com")
-         (sql-port 1521))))
+(with-eval-after-load 'sql
+  (setq sql-connection-alist
+        '((pool-a
+           (sql-product 'postgresql)
+           (sql-server "127.0.0.1")
+           (sql-user "postgres")
+           (sql-password "secret_db_password")
+           (sql-database "postgres")
+           (sql-port 5432))
+          (pool-a
+           (sql-product 'oracle)
+           (sql-server "glvdeveldb.vermeermfg.com")
+           (sql-user "WEB_API")
+           (sql-password "zDG4M#EQfV_9QYt")
+           (sql-database "glvdevel.vermeermfg.com")
+           (sql-port 1521)))))
 
 ;; ============================= ORG ===========================================
 (org-babel-do-load-languages

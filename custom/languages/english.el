@@ -3,9 +3,11 @@
 ;;; Configuration to help when writing text documents.
 
 ;;; Code:
-(add-to-list 'exec-path "~/.emacs.d/tools/Hunspell/bin/")
+(when (file-directory-p "~/.emacs.d/tools/Hunspell/bin/")
+  (add-to-list 'exec-path "~/.emacs.d/tools/Hunspell/bin/"))
 
-(setq ispell-program-name "hunspell")
+(when (executable-find "hunspell")
+  (setq ispell-program-name "hunspell"))
 (setq flyspell-issue-message-flag nil)
 (require 'ivy)
 (require 'ispell)

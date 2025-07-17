@@ -67,20 +67,23 @@
 
 
 ;; === Functions ===
+(defvar dotnet--project-root-cache nil
+  "Cache for project root to avoid repeated filesystem calls.")
+
 (defun find-project-root ()
   "Find the root of the current project directory."
   (interactive)
-  (if (ignore-errors (eproject-root))
-      (eproject-root)
-    (or (find-git-repo (buffer-file-name)) (file-name-directory (buffer-file-name)))))
+  (or dotnet--project-root-cache
+      (setq dotnet--project-root-cache
+            (or (when (fboundp 'eproject-root) (eproject-root))
+                (find-git-repo (or buffer-file-name default-directory))
+                (file-name-directory (or buffer-file-name default-directory))))))
 
 (defun find-git-repo (dir)
   "Find the git repository for DIR."
-  (if (string= "/" dir) full
-      nil
-    (if (file-exists-p (expand-file-name "../.git/" dir))
-        dir
-      (find-git-repo (expand-file-name "../" dir)))))
+  (when dir
+    (let ((dir (expand-file-name dir)))
+      (locate-dominating-file dir ".git"))))
 
 
 (defun file-path-to-namespace ()

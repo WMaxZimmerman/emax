@@ -2,7 +2,8 @@
 (require 'ob-mermaid)
 
 ;; === Setup ===
-(setq ob-mermaid-cli-path "~/.nvm/versions/node/v12.13.1/bin/mmdc")
+(when (file-exists-p "~/.nvm/versions/node/v12.13.1/bin/mmdc")
+  (setq ob-mermaid-cli-path "~/.nvm/versions/node/v12.13.1/bin/mmdc"))
 (setq mermaid-output-format ".svg")
 
 

@@ -6,14 +6,13 @@
 (setq-default c-basic-offset 2)
 (setq-default standard-indent 2)
 
-(if (eq system-type 'windows-nt)
-    (progn
-      (setq explicit-shell-file-name "C:\\bench\\tools\\scoop\\apps\\git\\current\\bin\\bash.exe")
-      (setq shell-file-name "C:\\bench\\tools\\scoop\\apps\\git\\current\\bin\\bash.exe")
+(when (eq system-type 'windows-nt)
+  (let ((bash-path "C:\\bench\\tools\\scoop\\apps\\git\\current\\bin\\bash.exe"))
+    (when (file-exists-p bash-path)
+      (setq explicit-shell-file-name bash-path)
+      (setq shell-file-name bash-path)
       (setq explicit-bash.exe-args '("--noediting" "--login" "-i"))
-      (setenv "PID" nil)
-      )
-)
+      (setenv "PID" nil))))
 
 (global-set-key [f1] 'shell)
 (setq split-height-threshold nil)
