@@ -5,10 +5,6 @@
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 
-;;; And I have tried
-(setq indent-tabs-mode nil)
-(setq tab-width 4)
-
 ;; === Custom Things ===
 (setq whitespace-line-column 80)
 (set-default 'truncate-lines t)

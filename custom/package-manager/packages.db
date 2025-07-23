@@ -61,3 +61,6 @@ sql-indent
 terraform-mode
 gnuplot
 json-mode
+aidermacs
+org-present
+org-tree-slide

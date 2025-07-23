@@ -3,12 +3,12 @@
 ;;; Configuration to help when writing text documents.
 
 ;;; Code:
-(add-to-list 'exec-path "~/.emacs.d/tools/Hunspell/bin/")
-;;(add-to-list 'exec-path "C:/Program Files (x86)/Aspell/bin/")
+(when (file-directory-p "~/.emacs.d/tools/Hunspell/bin/")
+  (add-to-list 'exec-path "~/.emacs.d/tools/Hunspell/bin/"))
 
-(setq ispell-program-name "hunspell")
+(when (executable-find "hunspell")
+  (setq ispell-program-name "hunspell"))
 (setq flyspell-issue-message-flag nil)
-;;(setq ispell-personal-dictionary "C:/path/to/your/.ispell")
 (require 'ivy)
 (require 'ispell)
 (require 'flyspell)
@@ -30,15 +30,6 @@
 
 
 ;; === Switching Spell Check Dictionary ===
-;;(defun fd-switch-dictionary()
-;;  (interactive)
-;;  (let* ((dic ispell-current-dictionary)
-;;    	 (change (if (string= dic "deutsch8") "english" "deutsch8")))
-;;    (ispell-change-dictionary change)
-;;    (message "Dictionary switched from %s to %s" dic change)
-;;    ))
-;;
-;;(global-set-key (kbd "<f8>")   'fd-switch-dictionary)
 
 (require 'flyspell-correct-ivy)
 (define-key flyspell-mode-map (kbd "C-;") 'flyspell-correct-wrapper)

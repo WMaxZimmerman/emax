@@ -1,34 +1,25 @@
 (delete-selection-mode 1)
 
-(if (eq system-type 'windows-nt)
-    (progn
-      ;;(setq explicit-shell-file-name "C:\\bench\\tools\\scoop\\apps\\git\\current\\bin\\bash.exe")
-      ;;(setq shell-file-name "C:\\bench\\tools\\scoop\\apps\\git\\current\\bin\\bash.exe")
-      ;;(setq shell-file-name "bash")
-      ;;(setq explicit-bash.exe-args '("--noediting" "--login" "-i"))
-      ;;(setenv "PID" nil)
-      (setq explicit-shell-file-name "C:\\Program Files\\Git\\bin\\bash.exe")
-      (setq shell-file-name "C:\\Program Files\\Git\\bin\\bash.exe")
-      (setq explicit-bash.exe-args '("--noediting" "--login" "-i"))
-      (setenv "PID" nil)
-      )
-)
+;; Global indentation defaults
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 2)
+(setq-default c-basic-offset 2)
+(setq-default standard-indent 2)
 
-;;(add-hook 'comint-output-filter-functions 'comint-strip-ctrl-m)
+(when (eq system-type 'windows-nt)
+  (let ((bash-path "C:\\bench\\tools\\scoop\\apps\\git\\current\\bin\\bash.exe"))
+    (when (file-exists-p bash-path)
+      (setq explicit-shell-file-name bash-path)
+      (setq shell-file-name bash-path)
+      (setq explicit-bash.exe-args '("--noediting" "--login" "-i"))
+      (setenv "PID" nil))))
+
 (global-set-key [f1] 'shell)
 (setq split-height-threshold nil)
 (setq split-width-threshold 0)
 (electric-pair-mode)
 (server-start)
 (global-so-long-mode t)
-
-;; (add-hook 'rectangle-mark-mode-on-hook (lambda () (progn
-;;                                                     (local-set-key (kbd "C-c SPC") 'mc/edit-lines)
-;;                                                     (message "Custom Shortcuts for rectangle On."))))
-
-;; (add-hook 'rectangle-mark-mode-off-hook (lambda () (progn
-;;                                                      (local-unset-key (kbd "C-c SPC") nil)
-;;                                                      (message "Custom Shortcuts for rectangle Off."))))
 
 (auto-save-visited-mode t)
 
@@ -38,7 +29,6 @@
 ;; EDiff Settings
 (setq ediff-window-setup-function 'ediff-setup-windows-plain)
 (setq ediff-split-window-function 'split-window-horizontally)
-;; (csetq ediff-diff-options "-w") ignores whitespace
 (defun ora-ediff-hook ()
   (ediff-setup-keymap)
   (define-key ediff-mode-map "j" 'ediff-next-difference)
