@@ -57,8 +57,6 @@
 	 "~/.emacs.d/custom/languages/sql"
 	 "~/.emacs.d/custom/languages/java"
 	 "~/.emacs.d/custom/languages/web"
-	 "~/.emacs.d/custom/languages/angular"
-	 "~/.emacs.d/custom/languages/react"
 	 "~/.emacs.d/custom/languages/typescript"
 	 "~/.emacs.d/custom/languages/terraform"
 	 "~/.emacs.d/custom/languages/postgres"

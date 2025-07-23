@@ -1,10 +1,6 @@
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 
-;; === Tabs Stuff ===
-(setq-default indent-tabs-mode nil)
-(setq-default tab-width 4)
-
 ;; === Custom Things ===
 (setq whitespace-line-column 80)
 (set-default 'truncate-lines t)

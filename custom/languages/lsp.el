@@ -128,6 +128,10 @@
 (define-key lsp-command-map (kbd "d o") 'dap-step-out)
 (define-key lsp-command-map (kbd "d n") 'dap-next)
 (define-key lsp-command-map (kbd "d c") 'dap-continue)
+(define-key lsp-command-map (kbd "d d") 'dap-debug)
+(define-key lsp-command-map (kbd "d l") 'dap-debug-last)
+(define-key lsp-command-map (kbd "d r") 'dap-debug-restart)
+(define-key lsp-command-map (kbd "d t") 'dap-disconnect)
 
 ;; === Language Specifics ===
 (load "~/.emacs.d/custom/languages/dotnet")

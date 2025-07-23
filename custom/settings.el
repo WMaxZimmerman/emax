@@ -2,9 +2,9 @@
 
 ;; Global indentation defaults
 (setq-default indent-tabs-mode nil)
-(setq-default tab-width 2)
-(setq-default c-basic-offset 2)
-(setq-default standard-indent 2)
+(setq-default tab-width 4)
+(setq-default c-basic-offset 4)
+(setq-default standard-indent 4)
 
 (when (eq system-type 'windows-nt)
   (let ((bash-path "C:\\bench\\tools\\scoop\\apps\\git\\current\\bin\\bash.exe"))

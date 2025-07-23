@@ -19,9 +19,7 @@
         ((driver . "postgresql")
          (dataSourceName . "host=phyrexian-revokers-postgres.c1uqwimyphu3.us-east-1.rds.amazonaws.com port=5432 user=postgres password=iE4H6iejFV7VD9D4 dbname=phyrexian_revokers sslmode=disable"))
         ((driver . "mysql")
-         (dataSourceName . "Server=localhost;Database=sammy;User Id=yyoncho;Password=hunter2;"))
-        ((driver . "oracle")
-         (dataSourceName . "Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=glvdeveldb.vermeermfg.com)(PORT=1521))(LOAD_BALANCE=yes)(CONNECT_DATA=(SERVER=DEDICATED) (SERVICE_NAME=glvdevel.vermeermfg.com)));User Id=WEB_API;Password=zDG4M#EQfV_9QYt;"))))
+         (dataSourceName . "Server=localhost;Database=sammy;User Id=yyoncho;Password=hunter2;"))))
 
 (with-eval-after-load 'sql
   (setq sql-connection-alist
@@ -31,14 +29,7 @@
            (sql-user "postgres")
            (sql-password "secret_db_password")
            (sql-database "postgres")
-           (sql-port 5432))
-          (pool-a
-           (sql-product 'oracle)
-           (sql-server "glvdeveldb.vermeermfg.com")
-           (sql-user "WEB_API")
-           (sql-password "zDG4M#EQfV_9QYt")
-           (sql-database "glvdevel.vermeermfg.com")
-           (sql-port 1521)))))
+           (sql-port 5432)))))
 
 ;; ============================= ORG ===========================================
 (org-babel-do-load-languages
