@@ -1,4 +1,7 @@
+;;; init.el -*- lexical-binding: t; -*-
+
 ;; === SETUP ===
+(setq straight-repository-branch "develop")
 (load "~/.emacs.d/straight/bootstrap")
 (straight-use-package '(org :type built-in))
 
@@ -124,3 +127,5 @@
    '(fsharp-mode latex-preview-pane lsp-sh 0blayout flycheck-plantuml plantuml-mode ox-reveal htmlize flyspell-correct-ivy flyspell-correct nimbus-theme org-d20 multiple-cursors groovy-mode prettier-js add-node-modules-path web-mode tide sly slime-company key-chord py-autopep8 material-theme ein elpy omnisharp magit smartparens yasnippet-snippets yasnippet highlight-parentheses auto-complete projectile better-defaults neotree company counsel ivy use-package)))
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
+
+

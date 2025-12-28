@@ -1,3 +1,5 @@
+;;; facelift.el -*- lexical-binding: t; -*-
+
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 
@@ -13,7 +15,9 @@
 (setq whitespace-line-column 80)
 (set-default 'truncate-lines t)
 (setq truncate-partial-width-windows nil)
-(load-theme 'nimbus t) ;; load material theme
+
+;; Now load theme first
+(load-theme 'doom-one t)
 
 (setq safe-local-variable-values
  (quote
